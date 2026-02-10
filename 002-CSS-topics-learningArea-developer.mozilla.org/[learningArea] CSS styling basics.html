@@ -7,7 +7,8 @@
 
 
 <!-- The box model -->
-
+<!-- Block and inline boxes (outer display types) -->
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,14 +17,62 @@
     <title>Document</title>
     
     <style>
-        
+        p.inline-1 {
+            display: inline; /**/
+            width: 100px; height: 200px; /* no effect */
+            margin-top: 10px; margin-bottom: 100px; /* no effect */
+
+            margin-left: 100px; margin-right: 20px; /* effective */
+            background-color: yellowgreen;
+        }
+        p.inline-2 {
+            display: inline;
+            padding-top: 45px; padding-bottom: 45px; /* overlapping */
+            
+            padding-left: 50px; padding-right: 10px; /* = width */
+            background-color: rgb(252, 195, 194);
+        }
+
+
+        p.block-1 {
+            display: block;
+            /* width = default(full) */
+            width: 100px; /* effective */
+            height: 50px; /* = padding-bottom */
+
+            margin: 30px; /* effective */
+            background-color: aqua;
+        }
+        p.block-2 {
+            display: block;
+            padding-top: 20px; padding-bottom: 20px; /* = height */
+            
+            padding-left: 30px; padding-right: 40px; /* effective */
+            background-color: aqua;
+        }
     </style>
 </head>
 <body>
-    
+    <h2>pisadofishdfoiahsdof</h2>
+    <p class="inline-1">uighvgjhvjhvjhv</p>   <p class="inline-1">aishdufhdiugifdsugbsifdgb</p>
+    <h2>jhfdaodhfogjhfdg</h2>
+
+    <h2>pisadofishdfoiahsdof</h2>
+    <p class="inline-2">uighvgjhvjhvjhv</p>   <p class="inline-2">aishdufhdiugifdsugbsifdgb</p>  <p class="inline-2">aishdufhdiugifdsugbsifdgb</p>
+    <h2>jhfdaodhfogjhfdg</h2>
+
+
+    <h2>pisadofishdfoiahsdof</h2>
+    <p class="block-1">uighvgjhvjhvjhv</p>   <p class="block-1">aishdufhdiugifdsugbsifdgb</p>
+    <h2>jhfdaodhfogjhfdg</h2>
+
+    <h2>pisadofishdfoiahsdof</h2>
+    <p class="block-2">uighvgjhvjhvjhv</p>   <p class="block-2">aishdufhdiugifdsugbsifdgb</p>
+    <h2>jhfdaodhfogjhfdg</h2>
 </body>
 </html>
-
+-->
+<!--  -->
 
 
 
