@@ -1,0 +1,563 @@
+
+
+
+
+
+
+
+
+<!-- The box model -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- --Test your skills: Selectors-- -->
+
+
+
+<!-- Combinators -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #ul1 li {
+            color: green;
+        }
+        #ul2 > li {
+            color: green;
+        }
+
+        #s1 h2 + p {
+            color: green;
+        }
+        #s2 h2 ~ p {
+            color: green;
+        }
+
+        h3#h3id {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul1">
+        <li>item1</li>
+        <li>item2</li>
+        <ol>
+            <li>itemul1</li>
+            <li>itemul2</li>
+        </ol>
+    </ul>
+    <ul id="ul2">
+        <li>item1</li>
+        <li>item2</li>
+        <ol>
+            <li>itemul1</li>
+            <li>itemul2</li>
+        </ol>
+    </ul>
+
+
+    <section id="s1">
+        <h2>this is a h1</h2>
+        <p>p1 this is just a text</p>
+        <p>p2 this is just a text</p>
+    </section>
+    <section id="s2">
+        <h2>this is a h1</h2>
+        <p>p1 this is just a text</p>
+        <p>p2 this is just a text</p>
+        <div>fdjsgbjdfg <p>hvjhvjh</p> </div>
+        <p>jdsjgbskjfdgbjdsbkjg</p>
+    </section>
+
+    <h3 id="h3id">jnalfjdsgdfsg</h3>
+</body>
+</html>
+-->
+
+
+
+<!-- Pseudo-classes and pseudo-elements -->
+<!-- Pseudo-classe work with a group but pseudo-elements work with single element -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        article :first-child {
+            font-weight: bold;
+        }
+
+
+        a:link,a:visited {
+            color: black;
+        }
+        a:hover {
+            color: rebeccapurple;
+        }
+        a:focus {
+            font-size: 25px;
+        }
+
+        div :first-line {
+            font-weight: bold;
+        }
+        section :first-child::first-line {
+            font-weight: bold;
+        }
+        section :first-child::selection {
+            background-color: black;
+            color: aliceblue;
+        }
+        /* :not(element) and :first-of-type and :nth-child(even)*/
+
+        h1::before {
+            content: "hello";
+            background-color: yellow;
+        }
+        h1::after {
+            content: "goodbye";
+            background-color: yellow;
+        }
+
+
+        .shape::before {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 100px;
+            border: 2px black solid;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfk
+        </p>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfk
+        </p>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfk
+        </p>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfk
+        </p>
+    </article>
+
+    <a href="">this is a link</a>
+
+    <div>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfksladfkhosdihgodfihogsdifhogidshofighosdifhgosidfhogsidfhogsidhfogihsdofiohgsidfhogishdfoighsdofihgodif dfhofdsighodsifhogisdhfoighsdofihgosdifhg
+        </p>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfk
+        </p>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfk
+        </p>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfk
+        </p>
+    </div>
+    <section>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfksladfkhosdihgodfihogsdifhogidshofighosdifhgosidfhogsidfhogsidhfogihsdofiohgsidfhogishdfoighsdofihgodif dfhofdsighodsifhogisdhfoighsdofihgosdifhg
+        </p>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfk
+        </p>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfk
+        </p>
+        <p>
+            asjdlfjas;ldfj la asdiflsandlfkhasld askdhflakshdlfk
+        </p>
+    </section>
+
+
+    
+    <h1> kdfhlgsdkfg </h1>
+
+    <span class="shape"></span>
+</body>
+</html>
+-->
+
+
+
+<!-- Attribute selectors -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        a[href] {
+            border: 5px solid black;
+        }
+        a[href=http] {
+            color: aqua;
+        }
+        p[class~=special] {
+            color: red;
+        }
+        p[class|=z] {   /*don't use this*/
+            color: green;
+        }
+
+
+        li[class^=box-] {
+            color: blue;
+        }
+        li[class$=-tshirt] {
+            color: red;
+        }
+        li[class*=-home] {
+            color: yellow;
+        }
+        li[class*=z],li[class*=p] {
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <a href="">this is a 1</a>
+    <a href="http">this is a 2</a>
+    <p class="c1 special">this is a 3</p>
+    <p class="z-h">this is a 4-1</p>
+    <p class="zhttp c1">this is a 4-2</p>
+    <p class="z">this is a 4-2</p>
+
+    <ul>
+        <li class="box-of-ale"> this is 1-1</li>
+        <li class="box-of-orange"> this is 1-2</li>
+        <li class="red-tshirt"> this is 2-1</li>
+        <li class="yellow-tshirt"> this is 2-2</li>
+        <li class="go-home-body"> this is 3-1</li>
+        <li class="come-back-to-your-home-boy">this is 3-2</li>
+        <li class="bzc">4-1</li>
+        <li class="cp">4-2</li>
+        <li class="zcp">4-3</li>
+    </ul>
+</body>
+</html>
+-->
+
+
+
+<!-- Basic CSS selectors -->
+<!-- "+" skipping, " " for cascading, noSpace for oneElement, : for e ke -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .c1 {
+            color: violet;
+        }
+        .c2 {
+            font-size: 100px;
+            border: 10px black solid;
+        }
+        .c1.c2 {
+            color: blue;
+        }
+
+        #id1 {
+            color: aqua;
+        }
+        h4#id2 {
+            color: red;
+        }
+
+        h5, .c3 {
+            color: chartreuse;
+        }
+
+        * {
+            direction: ltr;
+        }
+        body * {
+            direction: ltr;
+            margin: 0;
+        }
+
+        article :first-child {
+            color: rgb(112, 112, 14);
+        }
+        article *:first-child {
+            border: 1px green solid;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="c1">this is a h1 element</h1>
+    <h2 class="c1 c2">this is a h2 element</h2>
+
+    <h3 id="id1">this is a h3 element</h3>
+    <h4 id="id2">this is a h4 element</h4>
+    
+    <h5>this is a h5 element</h5>
+    <h6 class="c3">this is a h6 element</h6>
+
+
+    <article>
+        <p>this a p in article</p>
+        <p>this a p2 in article</p>
+        <section>
+            <p>this is a p element</p>
+            <p>thi is a secend child of his own parent</p>
+        </section>
+        <section>
+            <p>this is a p2 element</p>
+        </section>
+        <section>
+            <p>this is a p3 element</p>
+        </section>
+        <section>
+            <p>this is a p4 element</p>
+        </section>
+        <section>
+            <p>this is a p5 element</p>
+        </section>
+        <section>
+            <p>this is a p6 element</p>
+        </section>
+    </article>
+</body>
+</html>
+-->
+
+
+
+<!-- --Challenge: Styling a biography page-- -->
+
+
+
+<!-- Getting started with CSS -->
+<!-- three way of appling css -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="">
+    <style></style>
+</head>
+<body>
+    <p>this is a example of inline <span style="color: purple; font-weight: bold;">styling</span></p>
+</body>
+</html>
+-->
+<!-- css blocks forms -->
+<!-- "+" skipping, " " for cascading, noSpace for oneElement -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: red;
+        }
+        p,li {
+            color: green;
+        }
+
+        .sp {
+            color: orange;
+            font-weight: bold;
+        }
+
+        li span {
+            color: cornflowerblue;
+        }
+        li span sub {
+            color: black;
+        }
+
+        h2 + p {
+            color: yellow;
+        }
+        h2 + p + p {
+            color: violet;
+        }
+
+        a:link {
+            color: rgb(33, 117, 66);
+        }
+        a:visited {
+            color: red;
+        }
+        a:hover {
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is a h1</h1>
+    <p>another p</p>
+
+    <ul>
+        <li>item1</li>
+        <li class="sp">item2</li>
+        <li><span>item3</span><span><sub>-3</sub></span></li>
+        <li class="sp2">item4</li>
+    </ul>
+
+    <h2>this is a h2</h2>
+    <p>this a p</p>
+    <p>this is a another p</p>
+
+    <a href="http://www.google.com">this is a link1</a>
+</body>
+</html>
+-->
+<!-- other CSS syntax features -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+        .outer {
+            border: 5px black solid;
+        }
+        .box {
+            padding: 10px;
+            background-color: rebeccapurple;
+            color: aliceblue;
+            width: calc(50% - 20px);
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            margin: 50px;
+            transform: rotate(0.125turn);
+        }
+
+        body {
+            background-color: rgb(231, 112, 132);
+        }
+        @media (width >= 100em) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        .a {
+            margin: 0 auto 0 auto;
+            padding: 10px 10px 10px 10px;
+            background: red url("") 10px 10px repeat-x fixed;
+            font: 1em/150% "Helvetica","Arial", sans-serif;
+        }
+        /*
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-left: 5px;
+        -
+        background-color: red;
+        background-image: url("bg-graphic.png");
+        background-position: 10px 10px;
+        background-repeat: repeat-x;
+        background-attachment: fixed;
+        */
+   </style>
+</head>
+<body>
+   <div class="outer"><div class="box">this is a progress bar</div></div>
+
+   <div class="box2"></div>
+
+    <p>look at header</p>
+
+    <div class="outer"><div class="box a">this is a progress bar</div></div>
+</body>
+</html>
+-->
+
+
+
+<!-- What is CSS? -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: blue;
+            font-size: 2.5em;
+        }
+        p {
+            color: aqua;
+            padding: 5px;
+            background: midnightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is a h1</h1>
+    <p>this is a p , i don't know what i type more i should do but i know its a good choice</p>
+</body>
+</html>
+-->
