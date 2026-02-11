@@ -5,6 +5,37 @@
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- The box model -->
 <!-- Block and inline boxes (outer display types) -->
@@ -72,6 +103,65 @@
 </body>
 </html>
 -->
+<!-- The alternative/standard CSS box model -->
+ <!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       div.alternative {
+        border: 2px solid black;
+        height: 300px;
+       }
+       p.alternative {
+        box-sizing: border-box; /*The alternative CSS box model*/
+        margin: 0;
+        border: 2px solid blue;
+
+        height: inherit; /* = padding+heightOfContentBox */
+        padding: 30px;
+       }
+
+       div.standard {
+        border: 2px solid black;
+        height: 300px;
+       }
+       p.standard {
+        /* DEFAULT */ /*The standard CSS box model*/
+        margin: 0;
+        border: 2px solid blue;
+
+        height: inherit; /* = heightOfContentBox */
+        padding: 30px;
+       }
+
+
+       
+       /* always, put this into your project *//*
+       html {
+        box-sizing: border-box;
+       }
+       *,*::before,*::after {
+        box-sizing: inherit;
+       }
+       */
+    </style>
+</head>
+<body>
+    <div class="alternative">
+        <p class="alternative">jhdsfldgkdjsgbkjfdkjgb</p>
+    </div>
+
+    <div class="standard">
+        <p class="standard">jhdsfldgkdjsgbkjfdkjgb</p>
+    </div>
+</body>
+</html>
+ -->
 <!--  -->
 
 
