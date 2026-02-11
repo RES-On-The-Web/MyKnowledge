@@ -5,6 +5,10 @@
 
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +17,9 @@
     <title>Document</title>
 
     <style>
+        html {box-sizing: border-box;} *,*::before,*::after {box-sizing: inherit;}
         
+
     </style>
 </head>
 <body>
@@ -35,11 +41,18 @@
 
 
 
+<!-- Handling conflicts -->
+<!-- -->
+
+
+
+<!-- --Test your skills: The box model-- -->
+
 
 
 <!-- The box model -->
-<!-- Block and inline boxes (outer display types) -->
-<!--
+<!-- Block/inline/inline-Block boxes (outer display types) -->
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +62,7 @@
     
     <style>
         p.inline-1 {
-            display: inline; /**/
+            display: inline;
             width: 100px; height: 200px; /* no effect */
             margin-top: 10px; margin-bottom: 100px; /* no effect */
 
@@ -66,17 +79,33 @@
 
 
         p.block-1 {
-            display: block;
-            /* width = default(full) */
-            width: 100px; /* effective */
-            height: 50px; /* = padding-bottom */
-
+            display: block; box-sizing: border-box;
+            /* width = default(full) */ 
+            width: 100px; height: 70px; /* effective */
+            
             margin: 30px; /* effective */
             background-color: aqua;
         }
         p.block-2 {
-            display: block;
-            padding-top: 20px; padding-bottom: 20px; /* = height */
+            display: block; box-sizing: border-box;
+            padding-top: 20px; padding-bottom: 20px; /* effective */
+            
+            padding-left: 30px; padding-right: 40px; /* effective */
+            background-color: aqua;
+        }
+
+
+        p.inline-block-1 {
+            display: inline-block;
+            width: 200px; height: 50px; /* effective */
+            margin-top: 10px; margin-bottom: 10px; /* effective */
+
+            margin-left: 100px; margin-right: 10px; /* effective */
+            background-color: aqua;
+        }
+        p.inline-block-2 {
+            display: inline-block;
+            padding-top: 20px; padding-bottom: 20px; /* effective */
             
             padding-left: 30px; padding-right: 40px; /* effective */
             background-color: aqua;
@@ -100,10 +129,19 @@
     <h2>pisadofishdfoiahsdof</h2>
     <p class="block-2">uighvgjhvjhvjhv</p>   <p class="block-2">aishdufhdiugifdsugbsifdgb</p>
     <h2>jhfdaodhfogjhfdg</h2>
+
+
+    <h2>pisadofishdfoiahsdof</h2>
+    <p class="inline-block-1">uighvgjhvjhvjhv</p>   <p class="inline-block-1">aishdufhdiugifdsugbsifdgb</p>
+    <h2>jhfdaodhfogjhfdg</h2>
+
+    <h2>pisadofishdfoiahsdof</h2>
+    <p class="inline-block-2">uighvgjhvjhvjhv</p>   <p class="inline-block-2">aishdufhdiugifdsugbsifdgb</p>
+    <h2>jhfdaodhfogjhfdg</h2>
 </body>
 </html>
 -->
-<!-- The alternative/standard CSS box model -->
+<!-- The alternative/standard CSS box model --> <!--use alternative-->
  <!--
 <!DOCTYPE html>
 <html lang="en">
@@ -162,17 +200,183 @@
 </body>
 </html>
  -->
-<!--  -->
+<!-- Margin -->
+<!-- margin: | -- -->
+<!-- margin: x auto; */
+     margin: -40, auto, 0, auto; -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+        *,*::before,*::after {
+            box-sizing: inherit;
+            direction: ltr;
+        }
+        
+
+        /*overlapping*/
+        div.o {
+            border: 2px solid black;
+            height: 100px;
+
+            margin : 0;
+        }
+        p.o {
+            border: 2px solid blue;
+            background-color: rgb(160, 153, 255);
+            height: inherit;
+            width: 500px;
+
+            margin-top: -40px;
+            margin-right: auto;
+            /*margin-bottom: 0;*/
+            margin-left: auto;
+        }
+        
+
+        /* ++ = +(bigger one), -- = -(bigger nubmer), +- = +()=(-()) */
+        /* i don't write other examples below (total = 3 div exp.) */
+        div.margin-collapse {
+            border: 2px solid brown;
+            height: 200px;
+        }
+        p.margin-collapse#item1 {
+            border: 2px solid blue;
+            margin-bottom: 10px;
+        }
+        p.margin-collapse#item2 {
+            border: 2px solid blue;
+            margin-top: 60px;
+        }
+        
+
+        /* not working */
+        div.upAndDown {
+            border: 2px solid brown;
+            height: 200px;
+        }
+        p.upAndDown#item1 {
+            border: 2px solid blue;
+            margin-top: 10px;
+        }
+        p.upAndDown#item2 {
+            border: 2px solid blue;
+            margin-bottom: 0px; /* not working */ /*use flex display*/
+        }
+    </style>
+</head>
+<body>
+    <h1 class="o">ubsifubsidafubsaidufbiasudfbiusbd</h1>
+    <div class="o">
+        <p class="o">jhdsfldgkdjsgbkjfdkjgb</p>
+    </div>
+    <h2 class="o">ubsifubsidafubsaidufbiasudfbiusbd</h2>
 
 
 
+    <div class="margin-collapse">
+        <p class="margin-collapse" id="item1">jsdjfdgbkjdsgf</p>
+        <p class="margin-collapse" id="item2">jkfdlkjkfdjgbfd</p>
+    </div>
 
 
+    <div class="upAndDown">
+        <p class="upAndDown" id="item1">jsdjfdgbkjdsgf</p>
+        <p class="upAndDown" id="item2">jkfdlkjkfdjgbfd</p>
+    </div>
+</body>
+</html>
+-->
+<!-- Borders -->
+ <!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            margin: 60px;
+
+            border-top: 10px double black;
+            border-right: 5px dotted black;
+            border-bottom: 2.5px solid black;
+            border-left: 1.25px solid black;
+
+            /* useless *//*
+            border-width: ;
+            border-style: ;
+            border-color: ;
+
+            border-top-width
+            border-top-style
+            border-top-color
+            border-right-width
+            border-right-style
+            border-right-color
+            border-bottom-width
+            border-bottom-style
+            border-bottom-color
+            border-left-width
+            border-left-style
+            border-left-color
+            */
+
+        }
+    </style>
+</head>
+<body>
+    <p>jdsafhasdfasdisjdf</p>
+</body>
+</html>
+-->
+<!-- Padding -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+        *,*::before,*::after {
+            box-sizing: inherit;
+            direction: ltr;
+        }
 
 
+        p {
+            border: 2px solid black;
+            height: 200px;
+            width: 200px;
+            margin: 50px 0 0 100px;
 
-
-
+            padding-top: 10px;
+            padding-right: 10px; /* not working */
+            padding-bottom: 10px; /* not working */
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>sajdfaasdasdfkfb</p>
+</body>
+</html>
+-->
 
 
 
