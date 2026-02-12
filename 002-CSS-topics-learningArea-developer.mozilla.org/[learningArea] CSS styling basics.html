@@ -5,17 +5,13 @@
 
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <style>
         
     </style>
@@ -29,16 +25,216 @@
 
 
 
+<!--Test your skills: Values and units-->
+<!-- -->
 
 
 
+<!-- CSS values and units -->
+<!--absolute : px, cm, mm, pt, pc, in
+    relative : em, rem, %, vw, vh, vmin, vmax-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+    html {
+        font-size: 35px; /*n*/
+    }
+    div.wrapper {
+        font-size: 40px;
+    }
+    /* em = object font-size, % = parent font-size, rem = html font-size */
+    /* just for making element */
+    div.box {
+        background-color: lightblue;
+        border: 5px solid darkblue;
+        padding: 10px;
+        margin: 1em 0;
+        font-size: 1rem; /*1*px*/
+    }
+    .box.px {
+        width: 3px; 
+    }
+    .box.vw {
+        width: 3vw; 
+    }
+    .box.em {
+        width: 3em; /*3*rem*/
+    }
 
 
+    div.d1 {
+        border: 2px solid black;
+        height: 200px; width: 100vw;
+        display: inline-block;
+        margin: 0;
+    }
+    .d1.d11 {
+        border-color: blue;
+        width: 49%;
+        display: inline-block;
+    }
+    .d1.d12 {
+        border-color: green;
+        width: 49%;
+        display: inline-block;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box px">I am 200px wide</div>
+        <div class="box vw">I am 10vw wide</div>
+        <div class="box em">I am 10em wide</div>
+    </div>
+
+    <div class="d1">
+        <div class="d1 d11"></div><div class="d1 d12"></div> 
+    </div> 
+</body>
+-->
+<!--Color-->
+<!--
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div.box1 {
+            padding: 10px;
+            margin: 0.5em 0;
+            border-radius: 0.5em;
+        }
+        .box1.one {
+            background-color: antiquewhite;
+            opacity: 0.5;
+        }
+        .box1.two {
+            background-color: #128a7e79;
+        }
+        .box1.three {
+            background-color: rgba(52, 148, 49, 0.295);
+        }
+        
+        .box1.four {
+            background-color: hsla(78, 97%, 28%, 0.76);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper1">
+        <div class="box1 one">antiquewhite</div>
+        <div class="box1 two">#128a7d</div>
+        <div class="box1 three">rgb(52, 148, 49)</div>
+
+        <div class="box1 four">hsl(188 97% 28% / .3)</div>
+    </div>
+</body>
+</html>
+-->
+<!--Images-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            height: 150px;
+            width: 300px;
+            margin: 20px auto;
+            border-radius: 0.5em;
+        }
+
+    .image {
+        background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
+    }
+
+    .gradient {
+        background-image: linear-gradient(
+            90deg,
+            rgb(119 0 255 / 39%),
+            rgb(0 212 255 / 25%)
+        );
+    }
+    </style>
+</head>
+<body>
+    <div class="box image"></div>
+    <div class="box gradient"></div>
+</body>
+</html>
+-->
+<!--BG,functions-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            border: 5px solid rebeccapurple;
+            height: 200px;
+            width: 400px;
+            margin: 10px auto; /* | - */
+
+            background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
+            background-repeat: no-repeat;
+            background-position: right 50px; /* - | */
+            
+            border-radius: 0.5em;
+        }
+
+
+        .box2 {
+            border: 5px solid rebeccapurple;
+            height: 200px;
+            width: 400px;
+            margin-top: 170px;
+        }
+        .box2::after {
+            content: "sdhfkdjsgdkjgdksfjgjdkj";
+        }
+        .box2 { /*not responsive*/
+            transform: translate(30px, 40px);
+            transform: scale(1.5);
+            transform: rotate(90deg);
+            width: calc(400px + 100px); /*min(),max(),clamp()*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+
+    <div class="box2"></div>
+</body>
+</html>
+-->
+
+
+
+<!-- --Challenge: Fixing blog page styles-- -->
 
 
 
 <!-- --Test your skills: The Cascade-- -->
-<!-- -->
+
 
 
 <!-- Handling conflicts -->
@@ -281,8 +477,7 @@
     <p class="inline-block-2">uighvgjhvjhvjhv</p>   <p class="inline-block-2">aishdufhdiugifdsugbsifdgb</p>
     <h2>jhfdaodhfogjhfdg</h2>
 </body>
-</html>
--->
+</html> -->
 <!-- The alternative/standard CSS box model --> <!--use alternative-->
  <!--
 <!DOCTYPE html>
