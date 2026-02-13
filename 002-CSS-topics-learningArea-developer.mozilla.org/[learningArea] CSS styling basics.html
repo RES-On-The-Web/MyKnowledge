@@ -3,15 +3,32 @@
 
 
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        div {
+            display: inline-block;
+            width: 300px;
+            border: 2px solid black;
+        }
+        p {
+            padding: 50px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div><p>dklfhgsdfkjglkdf;ggfdsgsdfgsdfgsdfgsdf
+        idhafoidshgoidhfogidf
+        sdfgdsgfd
+    </p></div>
 </body>
 </html>
 
@@ -22,6 +39,165 @@
 
 
 
+
+
+
+<!--Overflowing content-->
+<!-- -->
+
+
+
+<!--Test your skills: Backgrounds and borders-->
+
+
+
+<!--Backgrounds and borders-->
+<!--background-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper {
+            display: flex;
+        }
+
+        .box {
+            width: 200px;
+            height: 80px;
+            padding: 0.5em;
+            border: 1px solid #cccccc;
+            margin: 20px;
+        }
+
+        .color {
+            background-color: #000000;
+        }
+
+        .big-img {
+            background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
+        }
+        .small-img {
+            background-image: url("https://mdn.github.io/shared-assets/images/examples/star.png");
+        }
+        
+        .small-img-AND-color {
+            background-image: url("https://mdn.github.io/shared-assets/images/examples/star.png");
+            background-color: #000000;
+        }
+
+        .small-img-AND-repeatation-AND-size {
+            background-image: url("https://mdn.github.io/shared-assets/images/examples/star.png");
+            background-repeat: no-repeat /*no-repeat,repeat-x,repeat-y,repeat,space,round */;
+            background-size: contain /*cover,50px,10%, 10px 20px*/;
+        }
+
+        .small-img-AND-position {
+            background-image: url("https://mdn.github.io/shared-assets/images/examples/star.png");
+            background-repeat: no-repeat;
+            background-position: center 50% ; /*top,right-bottom,center,left,1px,1%, 1px 1px 1px 1px*/
+        }
+
+        /*Gradient backgrounds -skip*/
+
+
+        .multi-BG-img {
+            background-image:("image1.png"), url("image2.png"), url("image3.png"), url("image4.png");
+            background-repeat: no-repeat, repeat-x, repeat;
+            background-position:10px 20px,top right;/*it's a cycle 3th=>1co*/
+        }
+
+        .small-img-AND-position {
+            background-attachment: fixed; /*fixed,scroll,local*//*see the link : https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html */
+        }
+
+        
+
+        .box9 {
+            width: 300px;
+            padding: 0.5em;
+            border: 5px solid lightblue;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 40px;
+        }
+        h2 {
+            padding: 16px 40px;
+            text-align: center;
+            background:
+                url("https://mdn.github.io/shared-assets/images/examples/star.png")
+                no-repeat left center,
+                url("https://mdn.github.io/shared-assets/images/examples/star.png") repeat-y
+                right center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box color"></div>
+
+    <div class="wrapper">
+        <div class="box big-img"></div>
+        <div class="box small-img"></div>
+    </div>
+
+    <div class="box small-img-AND-color"></div>
+    <div class="box small-img-AND-repeatation-AND-size"></div>
+
+    <div class="box small-img-AND-position"></div>
+
+
+
+    <div class="multi-BG-img"></div>
+
+
+    <div class="box9">
+        <h2>Backgrounds & Borders</h2>
+    </div>
+</body>
+</html>
+-->
+<!--border-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            border: 1px solid black;/*solid,dashed,dotted,double*/
+
+            /*
+            border-top : 1px solid black;
+
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: black;
+            */
+
+            border-radius: 5px 10px 0px 20px; /*1px, 1px 1px*/
+
+            /*
+            border-top-right-radius: 1px;
+            */
+        }
+    </style>
+</head>
+<body>
+    <p class="box">fghdhfdhhdf</p>
+</body>
+</html>
+-->
 
 
 
