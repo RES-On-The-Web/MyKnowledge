@@ -3,20 +3,12 @@
 
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-        
-    </style>
 </head>
 <body>
     
@@ -28,8 +20,116 @@
 
 
 
+
+
+
+
+
+<!--Test your skills: Sizing-->
+
+
+
 <!--Sizing items in CSS-->
-<!-- -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* extrinsic vs intrinsic height&width */
+        /* if intrinsic size of elements > natural size of container = overflow */
+        .d1 {
+            border: 2px solid black;
+        }
+        .d2 {
+            border: 2px solid black;
+        }
+
+        .d11 {
+            border: 2px solid black;
+            height: 10px;
+        }
+        .d22 {
+            border: 2px solid black;
+            height: 10px;
+        }
+
+
+        /*min-max width*/
+        .wrapper {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 50px;
+        }.wrapper > * {
+            margin: 20px;
+        }.box,.mini-box {
+            border: 5px solid darkblue;
+        }
+
+        div.box {
+            width: 200px;
+        }
+        .box .width {
+            width: 100%;
+        }
+        .box .max {
+            max-width: 100%;
+        }
+
+        div.mini-box {
+            width: 30px;
+        }
+        .mini-box .max {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: black; height: 100vh;"></div>
+    <div style="background-color: red; height: 100vh;"></div>
+
+
+
+    <br>
+    <div class="d1"></div>
+    <br>
+    <div class="d2"><img src="https://mdn.github.io/shared-assets/images/examples/big-star.png" alt="star"></div>
+
+    <p>
+    </p>
+
+    <div class="d11"></div>
+    <p></p>
+    <div class="d22"><img src="https://mdn.github.io/shared-assets/images/examples/big-star.png" alt="star"></div>
+
+
+
+    <div class="wrapper">
+        <div class="box">
+            <img
+            alt="star"
+            class="width"
+            src="https://mdn.github.io/shared-assets/images/examples/big-star.png" />
+        </div>
+        <div class="box">
+            <img
+            alt="star"
+            class="max"
+            src="https://mdn.github.io/shared-assets/images/examples/big-star.png" />
+        </div>
+        <div class="mini-box">
+            <img
+            alt="star"
+            class="max"
+            src="https://mdn.github.io/shared-assets/images/examples/big-star.png" />
+        </div>
+    </div>
+</body>
+</html>
+-->
 
 
 
