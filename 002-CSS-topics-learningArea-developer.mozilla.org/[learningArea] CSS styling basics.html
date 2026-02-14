@@ -6,6 +6,11 @@
 
 
 
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,21 +19,11 @@
     <title>Document</title>
 
     <style>
-        div {
-            display: inline-block;
-            width: 300px;
-            border: 2px solid black;
-        }
-        p {
-            padding: 50px;
-        }
+
     </style>
 </head>
 <body>
-    <div><p>dklfhgsdfkjglkdf;ggfdsgsdfgsdfgsdfgsdf
-        idhafoidshgoidhfogidf
-        sdfgdsgfd
-    </p></div>
+    
 </body>
 </html>
 
@@ -42,8 +37,90 @@
 
 
 
-<!--Overflowing content-->
+
+
+<!--Images, media, and form elements-->
 <!-- -->
+
+
+
+<!-- --Challenge: Sizing and decorating a content panel-- -->
+
+
+
+<!--Test your skills: Overflow-->
+
+
+
+<!--Overflowing content-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div.boxOB {
+            border: 1px solid #333333;
+            width: 250px;
+            height: 100px;
+        }
+        .boxOB.box1 {
+            display: inline-block;
+            
+            /*overflow: visible (by default)*/
+            /*overflow-y: visible;
+              overflow-x: visible;*/
+              overflow-wrap: break-word;
+            /*word-break: break-word; *//*break-all,break-word */
+        }
+        .boxOB.box2 {
+            position: absolute;
+            display: inline-block;
+
+            overflow: hidden;
+        }
+        .boxOB.box3 {
+            display: inline-block;
+
+            overflow: scroll;
+        }
+        .boxOB.box4 {
+            display: inline-block;
+
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin: 25px 0;">
+        <div class="boxOB box1">
+            This box has a height and a width. This means that if there is too much
+            content to be displayed within the assigned height, there will be an overflow
+            situation. If overflow is set to hidden then any overflow will not be visible.
+        </div>
+        <div class="boxOB box2">
+            This box has a height and a width. This means that if there is too much
+            content to be displayed within the assigned height, there will be an overflow
+            situation. If overflow is set to hidden then any overflow will not be visible.
+        </div>
+    </div>
+    <div>
+        <div class="boxOB box3">
+            This box has a height and a width. This means that if there is too much
+            content to be displayed within  will not be visible.
+        </div>
+        <div class="boxOB box4">
+            This box has a height and a width. This means that if there is too much
+            content to be displayed within  will not be visible.h. This means that if there is too much
+            content to be displayed within  will not be v
+        </div>
+    </div>
+</body>
+</html>
+-->
 
 
 
@@ -93,7 +170,7 @@
         .small-img-AND-repeatation-AND-size {
             background-image: url("https://mdn.github.io/shared-assets/images/examples/star.png");
             background-repeat: no-repeat /*no-repeat,repeat-x,repeat-y,repeat,space,round */;
-            background-size: contain /*cover,50px,10%, 10px 20px*/;
+            background-size: contain /*contain,cover,50px,10%, 10px 20px*/;
         }
 
         .small-img-AND-position {
