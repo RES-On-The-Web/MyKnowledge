@@ -6,16 +6,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +32,96 @@
 
 
 
+
+<!--Organizing your CSS-->
+<!-- -->
+
+
+
+<!--Handling different text directions -SKIP-->
+<!--
+ltr=Default
+rtl= direction:rtl (or) <html lang="fa" dir="rtl">
+-->
+
+
+
 <!--Cascade layers-->
-<!---->
+<!--origin=userAgent<auther<user-->
+<!--layers=A<B<unLayered(rootLayer), unNamedLayer=normalCascading-->
+<!--important=upsideDown ^-->
+<!--usage=theme,responsive-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @layer A, B;
+
+        @layer C {
+            main {
+                display: grid;
+            }
+        }
+        @layer {
+            body {
+                margin: 0;
+                font-family: system-ui;
+            }
+        }
+
+        @layer {
+            body {
+                margin: 0;
+                font-family: system-ui;
+            }
+        }
+
+        body { color: black; }
+        @media (min-width: 50em) {
+            @layer site;
+        }
+        @layer page;
+    </style>
+</head>
+<body>
+-->
+<!--
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import "components-lib.css" layer(components);
+        @import "marketing.css" layer();        
+        @import "dark-theme.css" layer(components.dark);
+
+        @import "file1.css" layer(social);
+        @import "file2.css" layer(social);
+
+        @import "international.css" layer(international) 
+            supports(display: ruby) and (max-width: 30em);
+
+        @import "components-lib.css" layer(components);
+        @import "dark-theme.css" layer(components.dark);
+        @import "narrow-layout.css" layer(components.narrow);
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+-->
 
 
 
