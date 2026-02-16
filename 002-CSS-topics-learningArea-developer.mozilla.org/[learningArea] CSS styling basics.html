@@ -8,12 +8,24 @@
 
 
 
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        
+    </style>
 </head>
 <body>
     
@@ -30,6 +42,266 @@
 
 
 
+<!--Cascade layers-->
+<!---->
+
+
+
+<!--Advanced styling effects-->
+<!--Box shadows-->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {font-size: 16px; box-sizing: border-box; margin: 0; font-family: sans-serif}*,*::before,*::after { box-sizing: inherit; margin: inherit; font-family: inherit}
+        button,input,select,textarea {font-family: inherit;font-size: 100%;box-sizing: border-box;padding: 0;margin: 0;}textarea {overflow: auto;}
+
+        /*box shadow*/
+        article.box-shadow-Object {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+
+            background-color: red;
+            background-image: linear-gradient(to bottom, transparent, rgb(0 0 0 / 25%));;
+        }
+        .box-shadow-Object.box-shadow1 {
+            box-shadow: 10px 6px 5px rgb(105, 1, 1);/*- | blur color*/
+        }
+        .box-shadow-Object.box-shadow2 {
+            box-shadow:
+                10px 8px 5px rgb(105, 1, 1),
+                10px 13px 5px rgb(0, 4, 255),
+                10px 20px 5px rgb(255, 166, 0);
+        }
+
+        button {
+            margin: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: white;
+
+            box-shadow: 
+                inset 5px 2.5px 5px black,
+                inset -5px -2.5px 0px white;
+        }
+
+        /*drop shadow*/
+        label {
+            display: inline-block;
+            align-content: center;
+            margin: 40px;
+            width: 200px;
+            height: 100px;
+            /* background-color: red; */
+            padding-left: 50px;
+
+            border: 4px dashed black;
+            filter: drop-shadow(5px 5px 1px black);
+        }
+    </style>
+</head>
+<body>
+    <article class="box-shadow-Object box-shadow1">
+        <p>
+            <strong>Warning</strong>: The thermostat on the cosmic transcender has
+            reached a critical level.
+        </p>
+    </article>
+    <article class="box-shadow-Object box-shadow2">
+        <p>
+            <strong>Warning</strong>: The thermostat on the cosmic transcender has
+            reached a critical level.
+        </p>
+    </article>
+
+    <br>
+    <button>Press me!</button>
+
+
+    <br>
+    <label>Press me!</label>
+</body>
+</html>
+-->
+<!--filters-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {font-size: 16px; box-sizing: border-box; margin: 0; font-family: sans-serif}*,*::before,*::after { box-sizing: inherit; margin: inherit; font-family: inherit}
+        button,input,select,textarea {font-family: inherit;font-size: 100%;box-sizing: border-box;padding: 0;margin: 0;}textarea {overflow: auto;}
+
+        /*filters*/
+        .wrapper {
+            display: flex;
+            align-items: flex-start;}
+        .wrapper > * {
+            margin: 20px;
+            flex: 1;}
+
+        img.imgObject {
+            height: 100%;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .imgObject.blur {
+            filter: blur(20px);
+        }
+        .imgObject.grayscale {
+            filter: grayscale(100%);
+        }
+        .imgObject.contrast {
+            filter: contrast(50%);
+        }
+        .imgObject.invert {
+            filter: invert(100%);
+        }
+        .imgObject.hue-rotate {
+            filter: hue-rotate(1000deg);
+        }
+
+
+        /*Blend & mixBlend -SKIP*/
+        .imgObject.simple {
+            filter: invert(100%);
+        }
+        .imgObject.blend {
+            background-color: red;
+            padding-top: 10px;
+            background-blend-mode: multiply; /*i dont have a .png for that*/
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject blur"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject grayscale"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject contrast"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject invert"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject hue-rotate"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject "
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+    </div>
+
+
+
+    <div class="wrapper">
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject blend"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject "
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+    </div>
+</body>
+</html>
+-->
+<!--img&text-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div.wrapper {
+            font-size: 1rem;
+        }
+        .wrapper .balloonImg {
+            float: left;
+            shape-outside: circle(50%);
+        }
+
+
+
+        h2.background-Object {
+            display: inline-block;
+            background: url(https://mdn.github.io/shared-assets/images/examples/round-balloon.png) no-repeat center;
+            color: white;
+        }
+        .background-Object.text-clip {
+            background-clip: initial;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png"
+             alt="balloon"
+             class="balloonImg">
+        <p>fbakdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfsajdbdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsf bkdsfdgsfdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsf bkdsfdgsfdfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfds fbkdsfdgsdfgsdfgsdfggdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsfbkdsfd sdfgsdfgsdfgsdfgsdfgdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgd gsdfgsdfgsdfgsdfgsdfgsdfgdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfoajbfsa
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+        </p>
+    </div>
+
+
+    <h2 class="background-Object NONE">WOW</h2>
+    <h2 class="background-Object text-clip">WOW</h2>
+</body>
+</html>
+-->
 
 
 
