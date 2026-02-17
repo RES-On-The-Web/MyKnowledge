@@ -1,11 +1,10 @@
 
 
 
-
-
-
-
-
+<!--Organizing your CSS-->
+<!--BEM = html structure-->
+<!--nested BEM = element style in a separate file-->
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,27 +13,78 @@
     <title>Document</title>
 
     <style>
-        
+        html {font-size: 16px; box-sizing: border-box; margin: 0; font-family: sans-serif}*,*::before,*::after { box-sizing: inherit; margin: inherit; font-family: inherit}
+        button,input,select,textarea {font-family: inherit;font-size: 100%;box-sizing: border-box;padding: 0;margin: 0;}textarea {overflow: auto;}
+
+        body {direction: rtl;}
+        .login-form--large {height: 100vh;}
+
+        .login-form__fieldset {display: flex; flex-direction: column; align-items: center; width: 600px; margin: auto;}
+        .login-form__fieldset > * {margin: 10px;}
+
+        .login-form__input {width: 200px; height: 20px; font-size: 0.8rem;}
+        .login-form__error-message {display: inline-block;}
+
+        .login-form__options {display: flex; flex-direction: column;}
     </style>
 </head>
 <body>
-    
+<form class="login-form login-form--large login-form--theme-dark">
+  <fieldset class="login-form__fieldset">
+    <legend class="login-form__legend">ورود به حساب کاربری</legend>
+
+    <div class="login-form__field">
+      <label class="login-form__label" for="email">ایمیل یا نام کاربری</label>
+      <input
+        class="login-form__input login-form__input--error"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="example@domain.com"
+        required
+        autofocus
+      />
+      <span class="login-form__error-message">ایمیل معتبر وارد کنید</span>
+    </div>
+
+    <div class="login-form__field">
+      <label class="login-form__label" for="password">رمز عبور</label>
+      <input
+        class="login-form__input"
+        type="password"
+        id="password"
+        name="password"
+        placeholder="حداقل ۸ کاراکتر"
+        required
+      />
+    </div>
+
+    <div class="login-form__options">
+      <label class="login-form__checkbox-wrapper">
+        <input class="login-form__checkbox" type="checkbox" name="remember" />
+        <span class="login-form__checkbox-text">مرا به خاطر بسپار</span>
+      </label>
+
+      <a href="#" class="login-form__forgot-password">رمز عبور را فراموش کرده‌اید؟</a>
+    </div>
+
+    <button
+      class="login-form__submit login-form__submit--loading"
+      type="submit"
+      disabled
+    >
+      ورود
+    </button>
+
+    <p class="login-form__signup-link">
+      حساب کاربری ندارید؟
+      <a href="#" class="login-form__signup-link-anchor">ثبت‌نام کنید</a>
+    </p>
+  </fieldset>
+</form>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-<!--Organizing your CSS-->
-<!-- -->
+-->
 
 
 
