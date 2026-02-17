@@ -3,6 +3,7 @@
 
 Attribute:
 <html lang="en"></html>
+<html lang="fa" dir="rtl"></html>
 *
 *
 
@@ -56,12 +57,13 @@ Notice:
 title & meta description is importent for search engine
 
 ------------------------------------------------
-<link>&<script>
+<link>&<script>&<style>
 
 Attribute:
 <link rel="icon" href="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
+*
 
 Structure:
 <!DOCTYPE html>
@@ -80,6 +82,9 @@ Structure:
     <link rel="icon" href="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <style>
+
+    <style>
 </head>
 <body>...</body>
 </html>
