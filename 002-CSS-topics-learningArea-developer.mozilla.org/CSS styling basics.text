@@ -1,0 +1,632 @@
+------------------------------------------------
+
+
+
+
+
+------------------------------------------------
+{background-}
+
+------------------------------------------------
+{overflow}&{overflow-wrap}&*
+
+Property|Value:
+overflow: hidden; (,visible(=DEFAULT))
+overflow: scroll;
+overflow: auto;
+overflow-wrap: break-word;
+word-break: break-word; (,break-all)
+
+Structure:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div.boxOB {
+            border: 1px solid #333333;
+            width: 250px;
+            height: 100px;
+        }
+        .boxOB.box1 {
+            display: inline-block;
+            
+            /*overflow: visible (by default)*/
+            /*overflow-y: visible;
+              overflow-x: visible;*/
+              overflow-wrap: break-word;
+            /*word-break: break-word; *//*break-all,break-word */
+        }
+        .boxOB.box2 {
+            position: absolute;
+            display: inline-block;
+
+            overflow: hidden;
+        }
+        .boxOB.box3 {
+            display: inline-block;
+
+            overflow: scroll;
+        }
+        .boxOB.box4 {
+            display: inline-block;
+
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin: 25px 0;">
+        <div class="boxOB box1">
+            This box has a height and a width. This means that if there is too much
+            content to be displayed within the assigned height, there will be an overflow
+            situation. If overflow is set to hidden then any overflow will not be visible.
+        </div>
+        <div class="boxOB box2">
+            This box has a height and a width. This means that if there is too much
+            content to be displayed within the assigned height, there will be an overflow
+            situation. If overflow is set to hidden then any overflow will not be visible.
+        </div>
+    </div>
+    <div>
+        <div class="boxOB box3">
+            This box has a height and a width. This means that if there is too much
+            content to be displayed within  will not be visible.
+        </div>
+        <div class="boxOB box4">
+            This box has a height and a width. This means that if there is too much
+            content to be displayed within  will not be visible.h. This means that if there is too much
+            content to be displayed within  will not be v
+        </div>
+    </div>
+</body>
+</html>
+------------------------------------------------
+{object-fit}&DEFAULT_SETTING
+
+Property|Value:
+object-fit:contain;  (,cover,fit,...)
+html {font-size: 16px; box-sizing: border-box; margin: 0; font-family: sans-serif}*,*::before,*::after { box-sizing: border-box; margin: 0; font-family: sans-serif}
+button,input,select,textarea {font-family: inherit;font-size: 100%;box-sizing: border-box;padding: 0;margin: 0;}textarea {overflow: auto;}
+
+Structure:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {font-size: 16px; box-sizing: border-box; margin: 0; font-family: sans-serif}*,*::before,*::after { box-sizing: border-box; margin: 0; font-family: sans-serif}
+        button,input,select,textarea {font-family: inherit;font-size: 100%;box-sizing: border-box;padding: 0;margin: 0;}textarea {overflow: auto;}
+
+        div.wrapper {
+            display: flex;
+            align-items: flex-start;
+            border: 2px solid black;
+        }
+        
+
+        div.boxContainer {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+        .boxContainer .img1 {
+            width: 100%;
+            height: 100%;
+            object-fit:contain;
+        }
+        .boxContainer .img2 {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="boxContainer">
+            <img src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" 
+             alt="a"
+             class="img1">
+        </div>
+        <div class="boxContainer">
+            <img src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" 
+             alt="b"
+             class="img2">
+        </div> 
+    </div>
+</body>
+</html>
+------------------------------------------------
+<table>&&:nth-child(2)
+
+Input:
+:nth-child(2)
+:nth-child(odd)
+:nth-child(even)
+
+Structure:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        html {font-size: 16px; box-sizing: border-box; margin: 0; font-family: sans-serif}*,*::before,*::after { box-sizing: inherit; margin: inherit; font-family: inherit}
+        button,input,select,textarea {font-family: inherit;font-size: 100%;box-sizing: border-box;padding: 0;margin: 0;}textarea {overflow: auto;}
+
+        table {
+            width: 60%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            margin: 10px auto;
+            display: block;
+        }
+        th,
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        tr :nth-child(2),
+        tr :nth-child(3) {
+            text-align: right;
+            width: 15%;
+        }
+        tr :nth-child(1),
+        tr :nth-child(4) {
+            text-align: left;
+            width: 35%;
+        }
+
+        tfoot tr :nth-child(1) {
+            text-align: right;
+        }
+        tfoot tr :nth-child(2) {
+            text-align: left;
+        }
+        tfoot {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #eeeeee;
+        }
+
+        caption {
+            display: block;
+            padding: 10px;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+<table>
+  <caption>
+    A summary of the UK's most famous punk bands
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Band</th>
+      <th scope="col">Year formed</th>
+      <th scope="col">No. of Albums</th>
+      <th scope="col">Most famous song</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Buzzcocks</th>
+      <td>1976</td>
+      <td>9</td>
+      <td>Ever fallen in love (with someone you shouldn't've)</td>
+    </tr>
+    <tr>
+      <th scope="row">The Clash</th>
+      <td>1976</td>
+      <td>6</td>
+      <td>London Calling</td>
+    </tr>
+    <tr>
+      <th scope="row">The Damned</th>
+      <td>1976</td>
+      <td>10</td>
+      <td>Smash it up</td>
+    </tr>
+    <tr>
+      <th scope="row">Sex Pistols</th>
+      <td>1975</td>
+      <td>1</td>
+      <td>Anarchy in the UK</td>
+    </tr>
+    <tr>
+      <th scope="row">Sham 69</th>
+      <td>1976</td>
+      <td>13</td>
+      <td>If The Kids Are United</td>
+    </tr>
+    <tr>
+      <th scope="row">Siouxsie and the Banshees</th>
+      <td>1976</td>
+      <td>11</td>
+      <td>Hong Kong Garden</td>
+    </tr>
+    <tr>
+      <th scope="row">Stiff Little Fingers</th>
+      <td>1977</td>
+      <td>10</td>
+      <td>Suspect Device</td>
+    </tr>
+    <tr>
+      <th scope="row">The Stranglers</th>
+      <td>1974</td>
+      <td>17</td>
+      <td>No More Heroes</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Total albums</th>
+      <td colspan="2">77</td>
+    </tr>
+  </tfoot>
+</table>
+</body>
+</html>
+------------------------------------------------
+*&{-webkit-background-clip}&{-webkit-text-fill-color}
+
+Property|Value:
+background-clip: initial;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+Structure:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div.wrapper {
+            font-size: 1rem;
+        }
+        .wrapper .balloonImg {
+            float: left;
+            shape-outside: circle(50%);
+        }
+
+
+
+        h2.background-Object {
+            display: inline-block;
+            background: url(https://mdn.github.io/shared-assets/images/examples/round-balloon.png) no-repeat center;
+            color: white;
+        }
+        .background-Object.text-clip {
+            background-clip: initial;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png"
+             alt="balloon"
+             class="balloonImg">
+        <p>fbakdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfsajdbdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsf bkdsfdgsfdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsf bkdsfdgsfdfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfds fbkdsfdgsdfgsdfgsdfggdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsfbkdsfd sdfgsdfgsdfgsdfgsdfgdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgd gsdfgsdfgsdfgsdfgsdfgsdfgdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfoajbfsa
+            dsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdfdsfbkdsfdgsfdgsdfgsdfgsdfgsdfgsdfgsdfgdf
+        </p>
+    </div>
+
+
+    <h2 class="background-Object NONE">WOW</h2>
+    <h2 class="background-Object text-clip">WOW</h2>
+</body>
+</html>
+------------------------------------------------
+{filter}&{background-blend-mode}
+
+Property|Value:
+filter: blur(20px);
+filter: grayscale(100%);
+filter: contrast(50%);
+filter: invert(100%);
+filter: hue-rotate(1000deg);
+filter: invert(100%);
+background-blend-mode: multiply;
+
+Structure:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {font-size: 16px; box-sizing: border-box; margin: 0; font-family: sans-serif}*,*::before,*::after { box-sizing: inherit; margin: inherit; font-family: inherit}
+        button,input,select,textarea {font-family: inherit;font-size: 100%;box-sizing: border-box;padding: 0;margin: 0;}textarea {overflow: auto;}
+
+        /*filters*/
+        .wrapper {
+            display: flex;
+            align-items: flex-start;}
+        .wrapper > * {
+            margin: 20px;
+            flex: 1;}
+
+        img.imgObject {
+            height: 100%;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .imgObject.blur {
+            filter: blur(20px);
+        }
+        .imgObject.grayscale {
+            filter: grayscale(100%);
+        }
+        .imgObject.contrast {
+            filter: contrast(50%);
+        }
+        .imgObject.invert {
+            filter: invert(100%);
+        }
+        .imgObject.hue-rotate {
+            filter: hue-rotate(1000deg);
+        }
+
+
+        /*Blend & mixBlend -SKIP*/
+        .imgObject.simple {
+            filter: invert(100%);
+        }
+        .imgObject.blend {
+            background-color: red;
+            padding-top: 10px;
+            background-blend-mode: multiply; /*i dont have a .png for that*/
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject blur"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject grayscale"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject contrast"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject invert"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject hue-rotate"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject "
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+    </div>
+
+
+
+    <div class="wrapper">
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject blend"
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+        <div class="box">
+            <img
+            alt="balloons"
+            class="imgObject "
+            src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+        </div>
+    </div>
+</body>
+</html>
+------------------------------------------------
+{box-shadow}&{drop-shadow}
+
+Property|Value:
+box-shadow:
+    10px 8px 5px rgb(105, 1, 1),
+    10px 13px 5px rgb(0, 4, 255),
+    10px 20px 5px rgb(255, 166, 0);
+box-shadow: 
+    inset 5px 2.5px 5px black,
+    inset -5px -2.5px 0px white;
+filter: drop-shadow(5px 5px 1px black);
+background-image: linear-gradient(to bottom, transparent, rgb(0 0 0 / 25%));;
+
+Structure:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {font-size: 16px; box-sizing: border-box; margin: 0; font-family: sans-serif}*,*::before,*::after { box-sizing: inherit; margin: inherit; font-family: inherit}
+        button,input,select,textarea {font-family: inherit;font-size: 100%;box-sizing: border-box;padding: 0;margin: 0;}textarea {overflow: auto;}
+
+        /*box shadow*/
+        article.box-shadow-Object {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+
+            background-color: red;
+            background-image: linear-gradient(to bottom, transparent, rgb(0 0 0 / 25%));;
+        }
+        .box-shadow-Object.box-shadow1 {
+            box-shadow: 10px 6px 5px rgb(105, 1, 1);/*- | blur color*/
+        }
+        .box-shadow-Object.box-shadow2 {
+            box-shadow:
+                10px 8px 5px rgb(105, 1, 1),
+                10px 13px 5px rgb(0, 4, 255),
+                10px 20px 5px rgb(255, 166, 0);
+        }
+
+        button {
+            margin: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: white;
+
+            box-shadow: 
+                inset 5px 2.5px 5px black,
+                inset -5px -2.5px 0px white;
+        }
+
+        /*drop shadow*/
+        label {
+            display: inline-block;
+            align-content: center;
+            margin: 40px;
+            width: 200px;
+            height: 100px;
+            /* background-color: red; */
+            padding-left: 50px;
+
+            border: 4px dashed black;
+            filter: drop-shadow(5px 5px 1px black);
+        }
+    </style>
+</head>
+<body>
+    <article class="box-shadow-Object box-shadow1">
+        <p>
+            <strong>Warning</strong>: The thermostat on the cosmic transcender has
+            reached a critical level.
+        </p>
+    </article>
+    <article class="box-shadow-Object box-shadow2">
+        <p>
+            <strong>Warning</strong>: The thermostat on the cosmic transcender has
+            reached a critical level.
+        </p>
+    </article>
+
+    <br>
+    <button>Press me!</button>
+
+
+    <br>
+    <label>Press me!</label>
+</body>
+</html>
+
+Notice: 
+box-shadow: -- | blurColor color;
+------------------------------------------------
+{@layer}&{@import}
+
+Property|Value:
+*
+
+Structure:
+@import "components-lib.css" layer(components);
+@import "marketing.css" layer();        
+@import "dark-theme.css" layer(components.dark);
+
+@import "file1.css" layer(social);
+@import "file2.css" layer(social);
+
+@import "international.css" layer(international) 
+    supports(display: ruby) and (max-width: 30em);
+
+@import "components-lib.css" layer(components);
+@import "dark-theme.css" layer(components.dark);
+@import "narrow-layout.css" layer(components.narrow);
+
+@layer A, B;
+@layer C {
+    main {
+        display: grid;
+    }
+}
+@layer {
+    body {
+        margin: 0;
+        font-family: system-ui;
+    }
+}
+body { color: black; }
+@media (min-width: 50em) {
+    @layer site;
+}
+@layer {
+    body {
+        margin: 0;
+        font-family: system-ui;
+    }
+}
+@layer page;
+
+Notice:
+origin= userAgent
+        < auther
+        < user
+layers= A
+      < B
+      < C
+      < unNamedLayer= normalCascading
+      < ?site
+      < unNamedLayer= normalCascading
+      < page
+      < unLayered(rootLayer) = always at the end
+
+.dark in components.dark is a sublayer
+components & components.dark = unLayered(rootLayer) & @layer dark;
+add !important= upsideDown precedence
+usage= theme,responsive
+------------------------------------------------
