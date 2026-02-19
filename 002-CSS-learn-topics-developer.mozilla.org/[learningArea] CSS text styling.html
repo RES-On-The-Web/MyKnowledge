@@ -6,8 +6,6 @@
 
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,5 +25,101 @@
 
 
 
-<!--Fundamental text and font styling-->
+
+
+
+
+<!--Styling lists-->
 <!-- -->
+
+
+
+<!--Fundamental text and font styling-->
+<!--Font styles,Text layout styles-->
+<!--always put 2 font= main,fallbackFont-->
+<!--text-align = aligning in content-box element-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {font-size: 16px; box-sizing: border-box; margin: 0; font-family: sans-serif}*,*::before,*::after { box-sizing: inherit; margin: inherit; font-family: inherit}
+        button,input,select,textarea {font-family: inherit;font-size: 100%;box-sizing: border-box;padding: 0;margin: 0;}textarea {overflow: auto;}
+        
+        .twitte-card {font-size: 1rem; padding: 20px;}
+        .twitte__title--default {
+            font-size: 2.5em;
+            color: blueviolet;
+            font-family: fantasy , sans-serif;
+            font-style: italic; /*normal,italic,oblique*/
+            font-weight: lighter; /*normal,bold,lighter,bolder,100-900*/
+            text-transform: uppercase; /*none,uppercase,lowercase,capitalize,full-width*/
+            text-decoration: underline; /*none,underline,overline,line-through*/
+            text-shadow: 10px 10px 5px red; /** -- | blur color **/ 
+            text-shadow:
+                300px 500px 1px red,
+                -300px 500px 5px red;
+            text-align: center; /*left,right,center,justify(+hyphens)*/
+        }
+        .twitte__preview {margin-top: 10px; font: 3em sans-serif;}
+        .twitte__decription {
+            margin-top: 10px;
+            line-height: 1.4;
+            letter-spacing: 3px;
+            word-spacing: 6px;
+            text-indent: 20px;
+            hyphens: auto;
+        }
+        /*
+Font styles:
+font-variant: Switch between small caps and normal font alternatives.
+font-kerning: Switch font kerning options on and off.
+font-feature-settings: Switch various OpenType font features on and off.
+font-variant-alternates: Control the use of alternate glyphs for a given font-face.
+font-variant-caps: Control the use of alternate capital glyphs.
+font-variant-east-asian: Control the usage of alternate glyphs for East Asian scripts, like Japanese and Chinese.
+font-variant-ligatures: Control which ligatures and contextual forms are used in text.
+font-variant-numeric: Control the usage of alternate glyphs for numbers, fractions, and ordinal markers.
+font-variant-position: Control the usage of alternate glyphs of smaller sizes positioned as superscript or subscript.
+font-size-adjust: Adjust the visual size of the font independently of its actual font size.
+font-stretch: Switch between possible alternative stretched versions of a given font.
+text-underline-position: Specify the position of underlines set using the text-decoration-line property underline value.
+text-rendering: Try to perform some text rendering optimization.
+
+Text layout styles:
+text-indent: Specify how much horizontal space should be left before the beginning of the first line of the text content.
+text-overflow: Define how overflowed content that is not displayed is signaled to users.
+white-space: Define how whitespace and associated line breaks inside the element are handled.
+word-break: Specify whether to break lines within words.
+direction: Define the text direction. (This depends on the language and usually it's better to let HTML handle that part as it is tied to the text content.)
+hyphens: Switch on and off hyphenation for supported languages.
+line-break: Relax or strengthen line breaking for Asian languages.
+text-align-last: Define how the last line of a block or a line, right before a forced line break, is aligned.
+text-orientation: Define the orientation of the text in a line.
+overflow-wrap: Specify whether or not the browser may break lines within words in order to prevent overflow.
+writing-mode: Define whether lines of text are laid out horizontally or vertically and the direction in which subsequent lines flow.
+        */
+
+    </style>
+</head>
+<body>
+    <div class="twitte-card">
+        <h1 class="twitte__title--default">Tommy the cat</h1>
+
+        <p class="twitte__preview">Well I remember it as though it were a meal ago…</p>
+
+        <p class="twitte__decription">
+            Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+            nestled its way into his mighty throat. Many a fat alley rat had met its
+            demise while staring point blank down the cavernous barrel of this awesome
+            prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+            had many a story to tell. But it was a rare occasion such as this that he did.
+        </p>
+    </div> 
+</body>
+</html>
+-->
