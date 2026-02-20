@@ -5,7 +5,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +27,121 @@
 
 
 
+<!--Web fonts-->
+<!-- -->
+
 
 
 <!--Styling links-->
-<!-- -->
+<!--LoVe Fear HAte-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {font-size: 16px; box-sizing: border-box; margin: 0; font-family: sans-serif}*,*::before,*::after { box-sizing: inherit; margin: inherit; font-family: inherit}
+        button,input,select,textarea {font-family: inherit;font-size: 100%;box-sizing: border-box;padding: 0;margin: 0;}textarea {overflow: auto;}
+        
+        body {
+            margin: 10px;
+        }
+
+        .centerize-card {
+            display: flex;
+        }
+        .paragraph-card {
+            max-width: 330px;
+            margin: auto;
+        }
+        .paragraph__empty-link:link {
+            color: blue;
+        }
+        .paragraph__empty-link:visited {
+            color: plum;
+        }
+        .paragraph-card {
+            font-size: 1.5rem;
+        }
+        .paragraph__empty-link:focus,
+        .paragraph__empty-link:hover {
+            text-decoration: none;
+            background-color: brown;
+            color: lightskyblue;
+        }
+        .paragraph__empty-link:active {
+            background-color: red;
+        }
+
+
+
+        .paragraph__empty-link::after {
+            content: "";
+            background-image: url(https://unpkg.com/@tabler/icons@3.36.1/icons/outline/check.svg);
+            background-position: 0 3px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            padding-left: 25px;
+            margin-left: 2px;
+            /* display: inline-block;
+            width: 1em;
+            height: 1em; *//* = background-size*/
+        }
+
+
+        
+        .header__nav {
+            font-size: 1rem;
+            display: flex;
+            gap: 1px;
+
+            width: 25em;
+        }
+        .header__nav__items {
+            background-color: brown;
+            width: 3.75em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            text-align: center;
+
+            text-decoration: nono;
+            margin: 0;
+        }
+        .header__nav__items:link {
+            color: white;
+        }
+        .header__nav__items:visited {
+            color: #4e4e4e;
+        }
+        .header__nav__items:focus,
+        .header__nav__items:hover {
+            background-color: orange;
+        }
+        .header__nav__items:active {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="centerize-card">
+        <p class="paragraph-card">this is a example. this is a example of a <a class="paragraph__empty-link" href="#">link</a>.
+           this is a example. this is a example of a <a class="paragraph__empty-link" href="#">link</a>.
+        </p>
+    </div>
+
+    <nav class="header__nav">
+        <a class="header__nav__items" href="###">item1</a>
+        <a class="header__nav__items" href="##">item2</a>
+        <a class="header__nav__items" href="##">item3</a>
+        <a class="header__nav__items" href="#">item4</a>
+        <a class="header__nav__items" href="#">item5</a>
+    </nav>
+</body>
+</html>
+-->
 
 
 
