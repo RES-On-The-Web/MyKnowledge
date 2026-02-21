@@ -6,16 +6,13 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-
-    </style>
 </head>
 <body>
     
@@ -28,8 +25,164 @@
 
 
 
+<!--Positioning-->
+<!-- -->
+
+
+
+<!--Test your skills: Floats-->
+
+
+
 <!--Floats-->
-<!---->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+
+
+        .wrapper2 {
+            display: block;
+            width: 100%;
+            /* border: 2px solid black; */
+        }
+        .col-box {
+            width: 33.333333%;
+            float: left;
+            overflow-wrap: break-word;
+        }
+
+        
+
+        .wrapp {
+            width: 100%;
+            display: block;
+        }
+        .box {
+            display: block;
+            float: left;
+
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 10px;
+            margin-right: 20px;
+            transform: translateY(11px);
+        }
+        .paragraph {
+            overflow-wrap: break-word;
+            margin-left: 8.8px;
+            background-color: blue;
+        }
+        .under {
+            background-color: blueviolet;
+        }
+        .clear {
+            clear: left; /*left,right,both*/
+        }
+
+
+
+        .flow-root{
+            display: flow-root;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper2">
+        <div class="col-box">ihdafsoisdhfosidhfoaish dfpoaishdpfoiahsdpofihasodihf
+            dsfojgpoifsdjgodifohgsd ifhogsidhfogihsdofgihsdoifg
+            sdfglsjhfdjghlfdskhgsdk jfhgsdjfhgsjdhglkjsdhfkgsjhsd
+            fgsdfhkgsjdfkgjsdgbksjd vbouo[uofdvubdkjfsbvkjfvbskfdjvb]aogj
+            ksadhflidshvoihvdodufho gshfdhsdopghiodkfhlgsdkhfgads
+            fghsdoflgsdjfhvbslfdjkl dsfkjldsfkjb
+        </div>
+        <div class="col-box">ihdafsoisdhfosidhfoaish dfpoaishdpfoiahsdpofihasodihf
+            dsfojgpoifsdjgodifohgsd ifhogsidhfogihsdofgihsdoifg
+            sdfglsjhfdjghlfdskhgsdk jfhgsdjfhgsjdhglkjsdhfkgsjhsd
+            fgsdfhkgsjdfkgjsdgbksjd vbouo[uofdvubdkjfsbvkjfvbskfdjvb]aogj
+            ksadhflidshvoihvdodufho gshfdhsdopghiodkfhlgsdkhfgads
+            fghsdoflgsdjfhvbslfdjkl dsfkjldsfkjb
+        </div>
+        <div class="col-box">ihdafsoisdhfosidhfoaish dfpoaishdpfoiahsdpofihasodihf
+            dsfojgpoifsdjgodifohgsd ifhogsidhfogihsdofgihsdoifg
+            sdfglsjhfdjghlfdskhgsdk jfhgsdjfhgsjdhglkjsdhfkgsjhsd
+            fgsdfhkgsjdfkgjsdgbksjd vbouo[uofdvubdkjfsbvkjfvbskfdjvb]aogj
+            ksadhflidshvoihvdodufho gshfdhsdopghiodkfhlgsdkhfgads
+            fghsdoflgsdjfhvbslfdjkl dsfkjldsfkjb
+        </div>
+    </div>
+    <div class="wrapp">
+        <div class="box">--Floats--</div>
+        <p class="paragraph">ihrgidsofgishdfohgdofig odsihogsidhfoighoif dhsogihfdosighodfihgosdifh
+            ogsidf hogisdhf ogihsdofiohgdsifho  tdutrjgfj rgsdfgdfgdfgsdfgsdfg
+            hoidgshfoighsdofigh so df ih ogsdifho gs  d ifhogsdihfogsdif hogsdihfogsdihfo
+            gsdifhogsdihfogid sho sdihfogdsf ihgsodif hogsdifohgsdihfosidhogidsfhogd
+            ifhog difgrhtghsfh gsfdhg sdfgqsidh ogfsahgkjhfkjgskfdjgbskfdjgbksdjgf
+            dslfgbslfjgbksdj gbks  jdkgsdjgbksj dgbksjdkgjsdkj gbkjgbkj fdgbksdjgkjbgfkjsdg
+            dsfgbksljdkgbsjdkg bsdgbksd jkgsjdgbkjskg jbkjgbkjgb dkfjgbskfdjgbkdsfjgbksdfgb
+            sdfjlgbkjfdsgbksdj gbksdjgbksdj kgsjdkgjskgjsbkf jgbkjfgbksdjfgbkdsjkgjdgjksdg
+            dgkjdsfgbkdjfgbks dfjgbsl kdjfgblksd jfgblkdsfgbksdfjgbksdkgjskjbgsfhghdfghdfbkdfjgbkds
+            sdfjlgbskjfgbk sdfjgbksdjfgbklsdjfgb lkds jkgjskdfgh gjsbkfdjgbkdjfsgb ksdjf gbksdfgb
+            isdhflgishdfhgsd kfkhgsdjhgksdhg ksdjfkgsjdfghd fgdhdfghdfghhfkghsdfkhgksd fjkgsdjhfkgjsdhfkjghgf
+            sdlfjhgkdjfkhgsdjfkhg sdfjkhgsdjfhkgsjd hfkg sddfghjfkgsjdkjshfdkgj dhkgsjdhfkgsdjg
+            sdfkjgbkjfdgbskdfjgbksdjfgbksdjg bksd jgbkjsdkgj bkjgsbkfdjgbskjfdgbksdjfbgksdgf
+            nbjgbfbkjbskjfgbksgfbksldgfbksdjfgbksdjfgblkdsfgbkdjfgbkdsjgbksdgkdgfbksdjg
+        </p>
+        <h2 class="under">idsihgosihfogidhfg</h2>
+        <h2 class="clear">adosjfpsdof</h2>
+    </div>
+
+    <div class="prevent-flex">
+        <div class="wrapp flow-root">
+            <div class="box">--Floats--</div>
+            <p class="paragraph">ihrgidsofgishdfohgdofig odsihogsidhfoighoif dhsogihfdosighodfihgosdifh
+                ogsidf hogisdhf ogihsdofiohgdsifho  tdutrjgfj rgsdfgdfgdfgsdfgsdfg
+                hoidgshfoighsdofigh so df ih ogsdifho gs  d ifhogsdihfogsdif hogsdihfogsdihfo
+                gsdifhogsdihfogid sho sdihfogdsf ihgsodif hogsdifohgsdihfosidhogidsfhogd
+                ifhog difgrhtghsfh gsfdhg sdfgqsidh ogfsahgkjhfkjgskfdjgbskfdjgbksdjgf
+                dslfgbslfjgbksdj gbks  jdkgsdjgbksj dgbksjdkgjsdkj gbkjgbkj fdgbksdjgkjbgfkjsdg
+                dsfgbksljdkgbsjdkg bsdgbksd jkgsjdgbkjskg jbkjgbkjgb dkfjgbskfdjgbkdsfjgbksdfgb
+                sdfjlgbkjfdsgbksdj gbksdjgbksdj kgsjdkgjskgjsbkf jgbkjfgbksdjfgbkdsjkgjdgjksdg
+                dgkjdsfgbkdjfgbks dfjgbsl kdjfgblksd jfgblkdsfgbksdfjgbksdkgjskjbgsfhghdfghdfbkdfjgbkds
+                sdfjlgbskjfgbk sdfjgbksdjfgbklsdjfgb lkds jkgjskdfgh gjsbkfdjgbkdjfsgb ksdjf gbksdfgb
+                isdhflgishdfhgsd kfkhgsdjhgksdhg ksdjfkgsjdfghd fgdhdfghdfghhfkghsdfkhgksd fjkgsdjhfkgjsdhfkjghgf
+                sdlfjhgkdjfkhgsdjfkhg sdfjkhgsdjfhkgsjd hfkg sddfghjfkgsjdkjshfdkgj dhkgsjdhfkgsdjg
+                sdfkjgbkjfdgbskdfjgbksdjfgbksdjg bksd jgbkjsdkgj bkjgsbkfdjgbskjfdgbksdjfbgksdgf
+                nbjgbfbkjbskjfgbksgfbksldgfbksdjfgbksdjfgblkdsfgbkdjfgbkdsjgbksdgkdgfbksdjg
+            </p>
+        </div>
+        <p class="paragraph">ihrgidsofgishdfohgdofig odsihogsidhfoighoif dhsogihfdosighodfihgosdifh
+                ogsidf hogisdhf ogihsdofiohgdsifho  tdutrjgfj rgsdfgdfgdfgsdfgsdfg
+                hoidgshfoighsdofigh so df ih ogsdifho gs  d ifhogsdihfogsdif hogsdihfogsdihfo
+                gsdifhogsdihfogid sho sdihfogdsf ihgsodif hogsdifohgsdihfosidhogidsfhogd
+                ifhog difgrhtghsfh gsfdhg sdfgqsidh ogfsahgkjhfkjgskfdjgbskfdjgbksdjgf
+                dslfgbslfjgbksdj gbks  jdkgsdjgbksj dgbksjdkgjsdkj gbkjgbkj fdgbksdjgkjbgfkjsdg
+                dsfgbksljdkgbsjdkg bsdgbksd jkgsjdgbkjskg jbkjgbkjgb dkfjgbskfdjgbkdsfjgbksdfgb
+                sdfjlgbkjfdsgbksdj gbksdjgbksdj kgsjdkgjskgjsbkf jgbkjfgbksdjfgbkdsjkgjdgjksdg
+                dgkjdsfgbkdjfgbks dfjgbsl kdjfgblksd jfgblkdsfgbksdfjgbksdkgjskjbgsfhghdfghdfbkdfjgbkds
+                sdfjlgbskjfgbk sdfjgbksdjfgbklsdjfgb lkds jkgjskdfgh gjsbkfdjgbkdjfsgb ksdjf gbksdfgb
+                isdhflgishdfhgsd kfkhgsdjhgksdhg ksdjfkgsjdfghd fgdhdfghdfghhfkghsdfkhgksd fjkgsdjhfkgjsdhfkjghgf
+                sdlfjhgkdjfkhgsdjfkhg sdfjkhgsdjfhkgsjd hfkg sddfghjfkgsjdkjshfdkgj dhkgsjdhfkgsdjg
+                sdfkjgbkjfdgbskdfjgbksdjfgbksdjg bksd jgbkjsdkgj bkjgsbkfdjgbskjfdgbksdjfbgksdgf
+                nbjgbfbkjbskjfgbksgfbksldgfbksdjfgbksdjfgblkdsfgbkdjfgbkdsjgbksdgkdgfbksdjg
+        </p>
+    </div>
+</body>
+</html>
+-->
 
 
 
