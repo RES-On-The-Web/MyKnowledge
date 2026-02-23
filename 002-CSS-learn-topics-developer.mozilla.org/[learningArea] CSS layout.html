@@ -6,15 +6,16 @@
 
 
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <style>
+        
+    </style>
 </head>
 <body>
     
@@ -28,8 +29,154 @@
 
 
 
+
+
+<!--Test your skills: Flexbox-->
+
+
+
 <!--Flexbox-->
-<!-- -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+        header {
+            background: purple;
+            height: 100px;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            line-height: 100px;
+            margin: 0;
+        }
+        section {
+            zoom: 0.8;
+        }
+        article {
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+
+        section {
+            display: flex; /*,inline-flex*/
+            flex-direction: row; /*column,row,row-reverse,column-reverse*/
+            /* flex-wrap: wrap; */
+
+            /*flex-flow: row wrap;*/ /*shorthand = flex-direction & flex-wrap*/
+        }
+        article:nth-last-of-type(1) {
+            flex: 1 1 100px;/*max min base-size*/ /*= 1 200px */ 
+            /*
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100px; *//*use min/max width instead of these*/
+        }
+        article:nth-last-of-type(2) {
+            flex: 9;
+        }
+        article:nth-last-of-type(3) {
+            flex: 9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sample flexbox example</h1>
+    </header>
+    <section>
+        <article>
+            <h2>First article</h2>
+            <p>Content…</p>
+        </article>
+        <article>
+            <h2>Second article</h2>
+            <p>Content…</p>
+        </article>
+        <article>
+            <h2>Third article</h2>
+            <p>Content…</p>
+        </article>
+    </section>
+
+</body>
+</html>
+-->
+<!--aligning-->
+<!--flexbox= align-items,justify-content 
+    &&normalbox= align-content,justify-items-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 90%;
+            max-width: 960px;
+            margin: 10px auto;
+        }
+        div {
+            height: 100px;
+            border: 1px solid black;
+        }
+        button {
+            font-size: 18px;
+            line-height: 1.5;
+            width: 15%;
+        }
+        
+        div {
+            display: flex;
+            align-items: center; /*center,start,end*//*=cross-axis*/
+            justify-content: space-around; /*space-around,space-between,center,start,end*//*=main-axis*/
+            /* justify-items: ; *//*not working in flexbox*/
+
+            /* flex-wrap: wrap; + align-content: center; */
+        }
+        .align-self {
+            align-self: flex-end;
+        }
+
+
+
+        /* button:first-child {
+            order: 1;
+        } */
+        button:last-child {
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>Smile</button>
+        <button>Laugh</button>
+        <button>Wink</button>
+        <button class="align-self">Shrug</button>
+        <button>Blush</button>
+    </div> 
+    <article style="border: 2px solid black; height: 400px; justify-items: center; align-content: center;">
+        <input style="display: block;" type="button" value="">
+        <input style="display: block;" type="button" value="">
+    </article>
+</body>
+</html>
+-->
 
 
 
