@@ -5,14 +5,13 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    
     <style>
         
     </style>
@@ -30,8 +29,176 @@
 
 
 
-<!--Multiple-column layout-->
+<!--Practical positioning examples-->
 <!-- -->
+
+
+
+<!--Multiple-column layout-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            width: 90%;
+            max-width: 900px;
+            margin: 2em auto;
+            font:
+                0.9em/1.2 "Helvetica",
+                "Arial",
+                sans-serif;
+        }
+        .container {
+            column-count: auto;
+            column-width: 200px;
+            column-gap: 15px;
+            column-rule: 2px dotted black;
+        }
+        h2 {
+            column-span: all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple multicol example</h1>
+
+        <p>
+            Lorem ipsum 1dolor sit amet, conse2ctetur adipiscing3 elit. Nulla luctus
+            aliquam dol4or, eu lacinia lorem5 placerat v6ulputate. Duis felis orci,
+            pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+            ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+            ligula ipsum, tristique sit amet orci vel, viverra e78gestas ligula. Curabitur
+            vehicula tellus neque, ac ornare ex malesuada et. In vitae c9onvallis lacus.
+            Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+            sollicitudin eros pharetra congue9. Duis ornare egestas augue ut luctus.
+            Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+            eget fermentum sapien.
+        </p>
+        <h2>Spanning subhead</h2>
+        <p>
+            Nam vulp12utate diam nec tempor bibendum.34 Donec luctus augue eget malesuada
+            ultrices. 5Phase6llu7s 7turpis est, posuere sit amet dapibus ut, facilisis sed
+            est. Nam id risus quis ante semper consectetur e8get aliquam lorem. Vivamus
+            tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+            lectus sed lobortis finibus. Vivamus eu urna eget velit cursus9 viverra quis
+            vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </p>
+    </div>
+</body>
+</html>
+-->
+<!--avoid breaking-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            column-width: 250px;
+        }
+
+        .card {
+            border: 2px solid rgb(79 185 227);
+            padding: 10px;
+            margin-bottom: 1em;
+
+            break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <h2>I am the heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>I am the heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>I am the heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
+  <div class="card">
+    <h2>I am the heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>I am the heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>I am the heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>I am the heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
+</div>
+</body>
+</html>
+-->
 
 
 
