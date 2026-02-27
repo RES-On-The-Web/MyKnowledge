@@ -5,8 +5,6 @@
 
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +15,7 @@
 <body>
     
     <script>
-        
+
     </script>
 </body>
 </html>
@@ -27,6 +25,112 @@
 
 
 
+
+
+
+<!--Test your skills: Strings-->
+<!-- -->
+
+
+
+<!--Useful string methods-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        ////length
+        let text = `hello`
+        console.log(text.length); /*5*/
+
+        ////char
+        console.log(text[0]); /*h*/ //= charAt()
+        console.log(text[text.length-1]); /*o*/
+
+        ////subString //case-sensitive
+        console.log(text.includes("ll")); /*true*/
+        console.log(text.startsWith("he")); /*true*/
+        console.log(text.endsWith("o")); /*true*/
+
+        ////indexOf
+        console.log(text.indexOf("l")); /*2*/
+
+        ////slice
+        console.log(text.slice(0,4)); /*hell*/ /*[0,4)*/
+        console.log(text.slice(4)); /*o*/
+        console.log(text.slice(-1)); /*o*/
+
+        ////lower/upper-case
+        let text2 = "TeSt2";
+        console.log(text2.toUpperCase());
+        console.log(text2.toLowerCase());
+
+        ////replace
+        console.log(text.replace("l","r"));
+        console.log(text.replaceAll("l","r"));
+        
+        ////remove start&end space
+        text3 = "    iasjdlkfds    ";
+        console.log(text3);
+        console.log(text3.trim());
+
+        ////chaining
+        let tehran = "tehRan";
+        let fixed = tehran[0].toUpperCase() + tehran.substring(1).toLowerCase();
+        console.log(fixed);
+    </script>
+</body>
+</html>
+-->
+
+
+
+<!--Handling text — strings in JavaScript-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //String
+        let a = 'this is a example' //don't use this
+        let b = "this is a example"
+        let c = `this is a example`
+
+        //multi-line
+        let m = "this is a \
+        multi-line"
+        let m2 = "this is a \n multi-line"
+        let m3 = `this is a 
+        multi-line `
+
+        //Concatenation
+        let name = "hamed"
+        console.log("hello " + name);
+        console.log(`hello ${name}`);
+        console.log(`hello ${10+20}`);
+
+        //string with number
+        console.log(`10`+1); /*101*/
+        console.log(`10`-1); /*9*/
+        
+        //String()
+        console.log(String(10))
+    </script>
+</body>
+</html>
+-->
 
 
 
