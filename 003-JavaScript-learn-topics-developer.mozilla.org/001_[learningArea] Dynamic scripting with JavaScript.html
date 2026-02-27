@@ -5,6 +5,8 @@
 
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +17,7 @@
 <body>
     
     <script>
-
+        
     </script>
 </body>
 </html>
@@ -27,8 +29,148 @@
 
 
 
-<!--A first splash into JavaScript-->
-<!-- -->
+
+<!--Test your skills: Math-->
+
+
+
+<!--Basic math in JavaScript — numbers and operators-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        ////str to num
+        a = "15";
+        console.log(a + 5) /*155 wrong*/
+        console.log(Number(a) + 5) /*20 correct*/
+
+        ////operators
+        let x = 10;
+        let y = 3;
+        console.log(x + y); /*13*/
+        console.log(x - y); /*7*/
+        console.log(x * y); /*30*/
+        console.log(x / y); /*3.3333*/
+        console.log(x % y); /*1*/
+        console.log(x ** y); /*1000*/
+
+        ////Assignment operators
+        let z = 10;
+        z += 10; /*z=20*/
+        z -= 10; /*z=10*/
+        z *= 10; /*z=100*/
+        z /= 10; /*z=10*/
+
+        ////Increment/Decrement
+        let I_D = 5;
+        console.log(I_D++); /*=5*/
+        console.log(I_D); /*=6*/
+        I_D = 5;
+        console.log(++I_D) /*=6*/
+
+        ////=== vs ==
+        console.log(5 === 5); /*true*/
+        console.log("5" === 5); /*false, diff type*/
+        console.log("5" == 5); /*true, 'auto converted'*/ //dont use == unless you know what u want
+        console.log(0 === false); /*false, diff type*/
+        console.log(0 == false); /*true, 'auto converted'*/
+
+        ////Math.functions()
+        Math.random() /*[0,1)*/
+        Math.floor(4.9) /*4*/
+        Math.ceil(4.1) /*5*/
+        Math.round(4.6) /*5*/
+        Math.max(5,12,3) /*12*/
+        Math.min(5,12,3) /*3*/
+        Math.pow(2,10) /*1024*/
+
+        ////examples
+        let dice = Math.floor(Math.random() * 6) + 1;
+        /*,*/
+        let price = "19900";
+        let discount = 15;
+        price = Number(price);
+        price *= (100 - discount) / 100;
+    </script>
+</body>
+</html>
+-->
+
+
+
+<!--Test your skills: Variables-->
+
+
+
+<!--Storing the information you need — Variables-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        ////Declaration
+        let ageD;
+        let nameD = "somthing";
+        x = 34123;
+        /* let ageD = 21 */ //repeatation error
+
+        ////Types
+        let age = 21; /*Number*/
+        let name = "hamed"; /*String*/
+        let isStudent = true; /*Boolean*/ /*= 6 > 3*/
+        let colors = ["blue","red"] /*Array*/
+        let person = {  friends : ["ali","hasan"]  ,  jobs : ["webDev"]  } /*Object*/
+
+        ////get value
+        colors[0] /*blue*/
+        person.friends; /*["ali","hasan"]*/
+
+        ////Dynamic typing
+        let data = "123";
+        data = 123;
+        data = true;
+
+        ////const ?
+        /*const PI;*/ //error 
+        const PI = 3.14159;
+        /*PI = 6.876876;*/ //Assignment to constant variable.
+        /*,*/
+        const dict = { name : "hamed"}
+        dict.name = "hamed2" //no error
+
+        ////how to choose let or const ?
+        // use const next change it to let
+
+        ////typeof
+        console.log(typeof dict);
+    </scrip>
+
+
+</body>
+</html>
+-->
+
+
+
+<!--What went wrong? Troubleshooting JavaScript -SKIP-->
+
+
+
+<!--A first splash into JavaScript -SKIP-->
 
 
 
