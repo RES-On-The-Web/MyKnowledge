@@ -126,3 +126,192 @@
 
 
     # 4.6. pass Statements
+#
+# # means nothing
+#
+# class myEmptyClass:
+#     pass
+# 
+# #
+# 
+# def initlog(*args):
+#     pass
+# 
+# #
+# 
+# def initlog(*args):
+#     ...
+
+
+    # 4.7. match Statements
+#
+# # _ = 'else'
+#
+# status=1
+# match status:
+#     case 2:
+#         print(1)
+#     case 2:
+#         print(2)
+#     case 4 | 3:
+#         print("4 | 3")
+#     case _:
+#         print("=elsey")
+
+
+    # 4.8. Defining Functions
+# a=4
+# def tabee():
+#     "this is a docstring (document of my code)"
+#     a=3
+#     print(a)
+
+
+    # 4.9. More on Defining Functions
+    # 4.9.1. Default Argument Values
+#
+# def plusTabee(a,b=1,c=1):
+#     print(a+b+c)
+# plusTabee(a=1,b=2)
+# 
+# #
+# 
+# i=2
+# def f(vari=i):
+#     print(vari)
+# i=3
+# f()
+# # : 2
+#
+# #
+#
+# def g(a, L=[]):
+#     L.append(a)
+#     print(L)
+# g(1)
+# g(2)
+# g(3)
+# # : [1]
+# # : [1,2]
+# # : [1,2,3]
+#
+# #
+#
+# def gg(a, L=None):
+#     if L==None:
+#         L=[]
+#     L.append(a)
+#     print(L)
+# gg(1)
+# gg(2)
+# gg(3)
+# # : [1]
+# # : [2]
+# # : [3]
+
+
+    # 4.9.2. Keyword Arguments
+#
+# # with the same arrangment in arguments & keyword. 
+# # * = args without key , ** = args with key
+# 
+# def somthing(a,*arguments, **keyword):
+#     print(a)
+#     print("-"*40)
+#     for arg in arguments:
+#         print(arg)
+#     print("-"*20)
+#     for kw in keyword:
+#         print(keyword[kw])
+#     print("-"*10)
+#     print(arguments)
+#     print(keyword)
+# somthing("git","-c","asdlfsd","asdfasdf",aa=30,bb=40)
+
+
+    # 4.9.3. Special parameters
+#
+# def p_pk_k(Jposition,/,pANDk,*,Jkeyword):
+#     print(Jposition,pANDk,Jkeyword)
+# p_pk_k("p",pANDk="pk",Jkeyword="dsaf")
+
+
+    # 4.9.3.1. Positional-or-Keyword Arguments
+    # 4.9.3.2. Positional-Only Parameter
+    # 4.9.3.3. Keyword-Only Arguments
+    # 4.9.3.4. Function Examples
+#
+# def rand1(*,arg):
+#     print(arg)
+# rand1(arg=2394)
+#
+# #
+#
+# def rand2(arg,/):
+#     print(arg)
+# rand2(8345)
+#
+# #
+#
+# def rand3(arg):
+#     print(arg)
+# rand3(arg=435345)
+# rand3(435345)
+
+
+    # 4.9.3.5. Recap
+    # 4.9.4. Arbitrary Argument Lists
+    # 4.9.5. Unpacking Argument Lists
+#
+# args = [2,5]
+# l=[]
+# for num in range(*args):
+#     l.append(num)
+# print(l)
+# print(*args)
+# 
+# # # 
+# 
+# def dictstar(var1,var2="dsafsdf",var3="afddafs"):
+#     print(var1,var2,var3)
+# dictL={"var1":"adsfdsf","var2":"asdas","var3":"asdfsdf"}
+# dictstar(**dictL)
+
+
+    # 4.9.6. Lambda Expressions
+#
+# # small function == lambda x,n: x+n
+# # small class ==
+# def smallClass(n):
+#     return lambda x:x+n 
+# ob = smallClass(100)
+# print(ob)
+# print(ob(1))
+
+
+    # 4.9.7. Documentation Strings
+#
+# # start with captal and end with dot
+# # secend line should be empty (=summary)
+# # other lines ... (there's no pattern)
+#
+# def my_function():
+#     """Do nothing, but document it.
+
+#     No, really, it doesn't do anything:
+
+#         >>> my_function()
+#         >>>
+#     """
+
+
+    # 4.9.8. Function Annotations
+#
+# # (NO ERROR)
+#
+# def annotations(name : str = "hamed",phoneNumber : int = "09000000") -> list:
+#     return [name,phoneNumber]
+# print(annotations())
+
+
+    # 4.10. Intermezzo: Coding Style
