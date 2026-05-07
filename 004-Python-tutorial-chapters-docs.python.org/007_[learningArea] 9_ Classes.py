@@ -36,7 +36,6 @@
 #         print(self.feet)
 # d = dog()
 # d.a()
-# #
 
 
     # 9.3.3. Instance Objects
