@@ -1,0 +1,425 @@
+
+<!-- --SKIP-- -->
+
+
+
+<!-- --Forms and buttons in HTML-- -->
+<!-- The name attributes for each set of radio buttons have to contain the same value -->
+<!-- button in form type = submit , button in somewhere else type = button (need js) -->
+<!-- id in input = for in label -->
+<!-- you can use section/fieldset tag to separate out form sections/elements-->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./exapmle.html" method="get">
+        <p>
+            <label for="name">name :</label>
+            <input type="text" name="name" id="name">
+        </p>
+        <p>
+            <label for="email">email :</label>
+            <input type="text" name="email" id="email">
+        </p>
+        <p>
+            <input type="submit" value="submit">
+        </p>
+    </form>
+
+    <br> <br> <br>
+
+    <form action="./exapmle.html" method="get">
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <fieldset>
+            <input type="radio" name="radia" id="radio">
+            <input type="radio" name="radia" id="radia">
+        </fieldset>
+        <input type="range" name="range" id="range" value="10">
+        <input type="color" name="color" id="color" value="#ffffff">
+        <input type="number" name="number" id="number">
+        <input type="password" name="password" id="password">
+        <input type="tel" name="tel" id="tel" placeholder="090000000">
+        <p>
+            <button type="button">need js</button>
+            <button type="reset">reset</button>
+            <button type="submit">submit</button>
+        </p>
+    </form>
+
+    <br> <br> <br>
+
+    <form action="./example.html" method="get">
+        <fieldset>
+            <legend>type of hotel</legend>
+            <label for="gold">gold</label>
+            <input type="radio" name="hotelType" id="gold" value="gold" checked>
+            <label for="silver">silver</label>
+            <input type="radio" name="hotelType" id="silver" value="silver">
+            <label for="bad">bad</label>
+            <input type="radio" name="hotelType" id="bad" value="bad" disabled>
+        </fieldset>
+        <fieldset>
+            <legend>other</legend>
+            <label for="yoga">yoga</label>
+            <input type="checkbox" name="yoga" id="yoga">
+            <label for="food">food</label>
+            <input type="checkbox" name="food" id="food">
+            <label for="balloon">balloon</label>
+            <input type="checkbox" name="balloon" id="balloon">
+        </fieldset>
+
+        <p>
+            <label for="foodTime">serving time</label>
+            <select name="foodTime" id="foodTime">
+                <option value="" selected>-- selct an option --</option>
+                <option value="01:00">01:00</option>
+                <option value="12:00">12:00</option>
+            </select>
+        </p>
+        <p>
+            <label for="comments">comments</label>
+            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        </p>
+
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html> -->
+
+
+
+<!-- --HTML table accessibility-- -->
+<!-- --SKIP-- -->
+
+
+
+<!-- --HTML table basics-- -->
+<!-- --SKIP-- -->
+
+
+
+<!-- --HTML video and audio-- -->
+<!-- --SKIP-- -->
+
+
+
+<!-- --HTML images-- -->
+<!-- resolutions in CSS not html -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img
+            src="./000_[miscellaneousArea]/redrock.png"
+            alt="The head and torso of a dinosaur skeleton;
+                    it has a large head with long sharp teeth"
+            height="341"
+            title=" actully this is useless . hover on the img" />
+
+        <figcaption>
+            A T-Rex on display in the Manchester University Museum.
+        </figcaption>
+    </figure>
+
+
+    <p>
+        this is a paragraph <br>
+        dsfgdsfgdsfgsdfgdsfg <br>
+        asdfasdfasdfasfsafasdfasdf <br>
+    </p>
+</body>
+</html> -->
+
+
+
+<!-- --Creating links-- -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" target="_blank" title="heading title" download>
+        <h1>heading</h1>
+    </a>
+</body>
+</html> -->
+
+
+
+<!-- --Structuring documents-- -->
+<!-- you should use 3 element in body directly. header-main-footer-->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+
+        <h1>header</h1>
+        <nav>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+
+            <form action="#">
+                <input type="search" name="q" placeholder="lets goooo">
+                <input type="submit" value="Go!">
+            </form>
+        </nav>
+
+
+    </header>
+    <main>
+
+
+        <article>
+            <h2>this is a article</h2>
+            <p>this is a paragarph in article</p>
+                <section>
+                    <h3>this is the 1th section</h3>
+                    <p>paragraph</p>
+                    <p>paragraph</p>
+                </section>
+                <section>
+                    <h3>this is the 2th section</h3>
+                    <p>paragraph</p>
+                    <p>paragraph</p>
+                </section>
+        </article>
+
+        <aside>
+            <h2>aside</h2>
+            <ul>
+                <li><a href="#">aside 1</a></li>
+                <li><a href="#">aside 2</a></li>
+                <li><a href="#">aside 3</a></li>
+            </ul>
+        </aside>
+
+
+    </main>
+    <footer>
+
+
+        <p>©Copyright</p>
+
+
+    </footer>
+</body>
+</html> -->
+
+
+
+<!-- --Advanced text features-- -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>i try to put a <q>quote</q> in this paragraph</p>
+    <p>this is a <blockquote>blockquote to write something in it</blockquote> and don't care about it</p>
+
+    <p>i typing <abbr >HTML</abbr></p>
+    <p>i typing <abbr title="HyperText Markup Language">HTML</abbr></p>
+
+    <address>
+        <p> 
+            street : i don't know <br>
+            phone : 0900000000 <br>
+            <a href="emailto:emailExapmle">email me</a>
+        </p>
+    </address>
+
+    <p>
+        i have C <sub>4</sub> and 100000000000000000000 <sup>0</sup> money
+        <code> this is a code</code> but may you need some block of codes <pre>
+            consol.log(" hello ")
+            consol.log(" *another line ")
+        </pre>
+        i have a <var>var</var> but i want to press a <kbd>key</kbd>
+    </p>
+
+    <br>
+    <p>give it to AI if you confused</p>
+    <h2>time tag</h2>
+    <p>Standard simple date</p>
+    <time datetime="2016-01-20">20 January 2016</time>
+    <p>Just year and month</p>
+    <time datetime="2016-01">January 2016</time>
+    <p>Just month and day</p>
+    <time datetime="01-20">20 January</time>
+    <p>Just time, hours and minutes</p>
+    <time datetime="19:30">19:30</time>
+    <p>You can do seconds and milliseconds too!</p>
+    <time datetime="19:30:01.856">19:30:01.856</time>
+    <p>Date and time</p>
+    <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+    <p>Date and time with timezone offset</p>
+    <time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+    <p>Calling out a specific week number</p>
+    <time datetime="2016-W04">The fourth week of 2016</time>
+</body>
+</html> -->
+
+
+
+<!-- --Lists-- -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>unordered item 1</li>
+        <li>unordered item 2</li>
+        <li>unordered item 3</li>
+    </ul>
+
+    <ol>
+        <li>ordered item 1</li>
+        <li>ordered item 2</li>
+        <li>ordered item 3</li>
+        <li>
+            <ul>
+                <li>inner list item 1</li>
+                <li>inner list item 2</li>
+            </ul>
+        </li>
+    </ol>
+
+    <dl>
+        <dt>hello</dt>
+            <dd>hello description</dd>
+        <dt>hi</dt>
+            <dd>also it means hello</dd>
+            <dd>hi description</dd>
+    </dl>
+</body>
+</html> -->
+
+
+
+<!-- --Emphasis and importance-- -->
+<!-- summary use smantic instead of i and b-->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> hello this is <em>me</em> and i'm <strong>strong</strong></p>
+</body>
+</html> -->
+
+
+
+<!-- --Headings and paragraphs-- -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>our website</h1>
+        <p>this is our site to present prodocts</p>
+
+        <h2>our team</h2>
+            <h3>hasan</h3>
+                <p>this is hasan i dont know him but i dont care too</p>
+            <h3>hamed</h3>
+                <p>it's me</p>
+            <h3>hosan</h3>
+                <p>he i UI/UX designer</p>
+
+        <h2>our tools</h2>
+            <h3>github/h3>
+            <h3>AI</h3>
+            <h3>moreAI</h3>
+</body>
+</html> -->
+
+
+
+<!-- --Web page metadata-- -->
+<!-- look at head section -->
+<!-- title & meta description is importent for search engine-->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&lt;title&gt; element</title>
+    <meta name="description" content="this is a exapmle of description">
+    
+    <link rel="shortcut icon" href="./000_[miscellaneousArea]/redrock.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+</body>
+</html> -->
+
+
+
+<!-- --Basic HTML syntax-- -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>basic html syntax</h1>
+    <p>i use <strong>strong</strong> in this paragraph </p>
+    <p>i use lowerThan &lt; and greaterThan &gt; in this paragraph</p>
+    <img    src="./000_[miscellaneousArea]/redrock.png"
+            alt="RedRock"
+            width="100px">
+    <a href="http://www.google.com">this is google</a>
+    <input type="text" disabled>
+</body>
+</html> -->
