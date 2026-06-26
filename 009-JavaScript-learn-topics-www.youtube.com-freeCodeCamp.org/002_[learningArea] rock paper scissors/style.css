@@ -1,0 +1,29 @@
+*,.body {
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+
+.wrapper-rps-game > button{
+    padding: 20px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.rock-buton {
+    background-color: transparent;
+    height: 100px;
+}
+.paper-buton {
+    background-color: transparent;
+    height: 100px;
+}
+.scissors-buton {
+    background-color: transparent;
+    height: 100px;
+}
+
+
+.sizere {
+    background-color: transparent;
+    height: 100px;
+}

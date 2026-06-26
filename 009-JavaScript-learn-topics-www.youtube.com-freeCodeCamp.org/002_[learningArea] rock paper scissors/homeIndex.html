@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homeStyle.css">
+    <script defer src="homeScript.js"></script>
+</head>
+<body>
+
+    <button class="subscribe" onclick="changeTheSubscribeText()">subscribe</button>
+    
+    <h4>
+        price &lt; 40$ , shipping == 10$ <br>
+        price &gt; 40$ , shipping == free
+    </h4>
+    <div>
+        <input placeholder="set a cost" class="input-cost" onkeydown="event.key == 'Enter' ? calcCost() : false">
+        <button class="calc-cost" onclick="calcCost()">Calc</button>
+    </div>
+    <p class="show-cost">final cost</p>
+    <a href="./index.html">click to play rock paper scissors</a>
+
+
+</body>
+</html>
