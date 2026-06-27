@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button class="js-button">button</button>
+
+    <script>
+
+        const JSButtonElement = document.querySelector(".js-button")
+        JSButtonElement.addEventListener("click", () => {
+            console.log("hello1");
+        })
+        JSButtonElement.addEventListener("click", () => {
+            console.log("hello2");
+        })
+        //JSButtonElement.removeEventListener("click", event_Function_Var) //not copy,paste
+
+
+
+
+        // function a(param){
+        //     param();
+        // }
+        // a(function aparam(){ console.log("hello") })
+
+
+
+        // setTimeout(function c(){console.log("hellooooo")}, 5000);
+        // console.log("helloooooo2")
+
+
+        // setInterval(function c(){console.log("hellooooo3")}, 5000);
+        // console.log("helloooooo4")
+        // // clearInterval(ID = setInterval)
+
+
+
+
+        // [
+        //     'sadfsd f',
+        //     'asdfas dfasdf',
+        //     'asdfa sdfsd'
+        // ].forEach(function(value){console.log(value);});
+
+        // [
+        //     'sadfsd f',
+        //     'asdfas dfasdf',
+        //     'asdfa sdfsd'
+        // ].forEach(function(value, index){console.log(value, index);});
+        // // continue ==>> return;
+
+
+        // let p0 = () => { return 2 + 1}
+        // let p1 = () => 2 + 1;
+        // let p2 = _ => 2 + 1;
+        // console.log(p0());
+        // console.log(p1());
+        // console.log(p2());
+        
+        // const dict = {
+        //     func1: () => { console.log("hello1"); return 10},
+        //     func2: () => { console.log("hello2"); return 0},
+        //     func3: () => { console.log("hello3"); return 10}
+        // }
+        // const dict2 = {
+        //     func1: function() { console.log("hello1"); return 10},
+        //     func2: function() { console.log("hello2"); return 0},
+        //     func3: function() { console.log("hello3"); return 10}
+        // }
+        // const dict3 = {
+        //     func1() { console.log("hello1"); return 10},
+        //     func2() { console.log("hello2"); return 0},
+        //     func3() { console.log("hello3"); return 10}
+        // }
+    </script>
+</body>
+</html>

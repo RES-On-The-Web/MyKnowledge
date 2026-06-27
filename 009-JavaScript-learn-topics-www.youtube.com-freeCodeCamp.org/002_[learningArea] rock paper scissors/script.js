@@ -57,7 +57,7 @@ function playGame(userMove){
     document.querySelector(".resultresult").innerText = `'${result}' `
 
     
-    document.querySelector(".result").innerHTML = `You: <img src="./${userMove}-image.png" class="sizere"> Computer: <img src="./${computerMove}-image.png" class="sizere">,     \n     win: ${showResult["win"]}, loose: ${showResult["loose"]}, Tie: ${showResult["Tie"]}`
+    document.querySelector(".result").innerHTML = `You: <img src="./${userMove}-image.png" class="sizere"> Computer: <img src="./${computerMove}-image.png" class="sizere">,     \n    <p> win: ${showResult["win"]}, loose: ${showResult["loose"]}, Tie: ${showResult["Tie"]}</p>`
 }
 
 function resetScore(){
@@ -66,7 +66,25 @@ function resetScore(){
     document.querySelector('.result').innerText = `\n win: 0, loose: 0, Tie: 0`
 }
 
-
+let isAutoplay = false
+let setIntervalId;
+function autoPlay(){
+    if (!isAutoplay){
+        setIntervalId = setInterval(function(){playGame(pickComputerMove())}, 1)
+        isAutoplay = true;
+    }else {
+        clearInterval(setIntervalId)
+        isAutoplay = false
+    }
+    autoPlayButton = document.querySelector(".auto-play");
+    if (autoPlayButton.innerText === 'Auto Play'){
+        autoPlayButton.innerText = 'Stop';
+        autoPlayButton.classList.add("red")
+    }else if (autoPlayButton.innerText === 'Stop'){
+        autoPlayButton.innerText = 'Auto Play';
+        autoPlayButton.classList.remove("red")
+    }
+}
 
 
 
