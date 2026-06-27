@@ -10,9 +10,14 @@
 <body>
 
     <h1>Todo List</h1>
-    <input type="text" placeholder="Todo List" class="js-name-input">
-    <button onclick="addTodo()">add</button>
-    <div class="list-body"></div>
+
+    <div class="todo-input-grid">
+        <input type="text" placeholder="Todo List" class="js-name-input name-input">
+        <input type="date" class="js-due-date-input due-Date-input">
+        <button onclick="addTodo()" class="normal-button add-button">Add</button>
+    </div>
+
+    <div class="list-body todo-list-grid"></div>
 
 </body>
 </html>
